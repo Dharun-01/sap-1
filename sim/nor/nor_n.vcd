@@ -1,0 +1,42 @@
+$date
+	Thu May 07 22:36:28 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module nor_n_tb $end
+$var wire 1 ! tb_y $end
+$var parameter 32 " W $end
+$var reg 2 # tb_a [1:0] $end
+$scope module dut $end
+$var wire 2 $ a [1:0] $end
+$var wire 1 ! y $end
+$var parameter 32 % WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 %
+b10 "
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+1!
+$end
+#10
+0!
+b1 #
+b1 $
+#20
+b10 #
+b10 $
+#30
+b11 #
+b11 $
+#40
