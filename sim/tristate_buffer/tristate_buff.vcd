@@ -1,0 +1,44 @@
+$date
+	Sat May 09 14:49:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tristate_buff_tb $end
+$var wire 1 ! tb_y $end
+$var parameter 32 " W $end
+$var reg 1 # tb_a $end
+$var reg 1 $ tb_en $end
+$scope module dut $end
+$var wire 1 # a $end
+$var wire 1 $ en $end
+$var wire 1 ! y $end
+$var parameter 32 % WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 %
+b1 "
+$end
+#0
+$dumpvars
+0$
+0#
+z!
+$end
+#10
+0!
+1$
+#20
+z!
+0$
+1#
+#30
+1!
+1$
+#40
