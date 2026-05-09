@@ -3,7 +3,7 @@ parameter W = 1;
 reg tb_clk;
 reg tb_reset;
 reg [W-1:0] tb_d;
-wire tb_q;
+wire [W-1:0] tb_q;
 
 initial tb_clk = 0;
 always #5 tb_clk = ~tb_clk; // Toggle the clock every 5 time units, creating a clock period of 10 time units.
