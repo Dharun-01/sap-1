@@ -1,0 +1,91 @@
+$date
+	Sun May 10 15:46:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module full_adder_tb $end
+$var wire 1 ! tb_sum $end
+$var wire 1 " tb_cout $end
+$var reg 1 # cout_expected $end
+$var reg 1 $ sum_expected $end
+$var reg 1 % tb_a $end
+$var reg 1 & tb_b $end
+$var reg 1 ' tb_cin $end
+$var integer 32 ( i [31:0] $end
+$scope module dut $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' cin $end
+$var reg 1 " cout $end
+$var reg 1 ) g $end
+$var reg 1 * p $end
+$var reg 1 ! sum $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0*
+0)
+b0 (
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+1'
+1$
+b1 (
+#20
+1*
+1&
+0'
+b10 (
+#30
+1"
+0!
+1'
+0$
+1#
+b11 (
+#40
+0"
+1!
+1%
+0&
+0'
+1$
+0#
+b100 (
+#50
+1"
+0!
+1'
+0$
+1#
+b101 (
+#60
+1)
+0*
+1&
+0'
+b110 (
+#70
+1!
+1'
+1$
+b111 (
+#80
+b1000 (
