@@ -1,0 +1,694 @@
+$date
+	Wed May 13 11:44:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module alu_tb $end
+$var wire 1 ! tb_zero_flag $end
+$var wire 3 " tb_result [2:0] $end
+$var wire 1 # tb_carry_flag $end
+$var wire 3 $ tb_a_result [2:0] $end
+$var parameter 32 % W $end
+$var reg 1 & expected_carry_flag $end
+$var reg 3 ' expected_result [2:0] $end
+$var reg 1 ( expected_zero_flag $end
+$var reg 3 ) tb_a [2:0] $end
+$var reg 1 * tb_a_out $end
+$var reg 1 + tb_add_sub $end
+$var reg 3 , tb_b [2:0] $end
+$var reg 1 - tb_clk $end
+$var reg 1 . tb_en_a $end
+$var reg 1 / tb_en_b $end
+$var reg 1 0 tb_en_res $end
+$var reg 1 1 tb_reset $end
+$var integer 32 2 i [31:0] $end
+$scope module dut $end
+$var wire 3 3 a [2:0] $end
+$var wire 1 * a_out $end
+$var wire 1 + add_sub $end
+$var wire 3 4 b [2:0] $end
+$var wire 1 - clk $end
+$var wire 1 . en_a $end
+$var wire 1 / en_b $end
+$var wire 1 0 en_res $end
+$var wire 1 1 reset_sig $end
+$var wire 3 5 xor_intern_b [2:0] $end
+$var wire 3 6 result [2:0] $end
+$var wire 3 7 internal_sum [2:0] $end
+$var wire 3 8 intern_b [2:0] $end
+$var wire 3 9 intern_a [2:0] $end
+$var wire 4 : carry [3:0] $end
+$var wire 3 ; a_result [2:0] $end
+$var parameter 32 < WIDTH $end
+$var reg 1 # carry_flag $end
+$var reg 1 ! zero_flag $end
+$scope begin en_flip_flop[0] $end
+$var parameter 2 = i $end
+$scope module a_input $end
+$var wire 1 - clk $end
+$var wire 1 > d $end
+$var wire 1 . en $end
+$var wire 1 1 reset $end
+$var parameter 32 ? WIDTH $end
+$var reg 1 @ q $end
+$upscope $end
+$scope module a_output $end
+$var wire 1 A a $end
+$var wire 1 * en $end
+$var wire 1 B y $end
+$var parameter 32 C WIDTH $end
+$upscope $end
+$scope module b_input $end
+$var wire 1 - clk $end
+$var wire 1 D d $end
+$var wire 1 / en $end
+$var wire 1 1 reset $end
+$var parameter 32 E WIDTH $end
+$var reg 1 F q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 G a $end
+$var wire 1 H b $end
+$var wire 1 I cin $end
+$var reg 1 J cout $end
+$var reg 1 K g $end
+$var reg 1 L p $end
+$var reg 1 M sum $end
+$upscope $end
+$scope module res_output $end
+$var wire 1 N a $end
+$var wire 1 0 en $end
+$var wire 1 O y $end
+$var parameter 32 P WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin en_flip_flop[1] $end
+$var parameter 2 Q i $end
+$scope module a_input $end
+$var wire 1 - clk $end
+$var wire 1 R d $end
+$var wire 1 . en $end
+$var wire 1 1 reset $end
+$var parameter 32 S WIDTH $end
+$var reg 1 T q $end
+$upscope $end
+$scope module a_output $end
+$var wire 1 U a $end
+$var wire 1 * en $end
+$var wire 1 V y $end
+$var parameter 32 W WIDTH $end
+$upscope $end
+$scope module b_input $end
+$var wire 1 - clk $end
+$var wire 1 X d $end
+$var wire 1 / en $end
+$var wire 1 1 reset $end
+$var parameter 32 Y WIDTH $end
+$var reg 1 Z q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 [ a $end
+$var wire 1 \ b $end
+$var wire 1 ] cin $end
+$var reg 1 ^ cout $end
+$var reg 1 _ g $end
+$var reg 1 ` p $end
+$var reg 1 a sum $end
+$upscope $end
+$scope module res_output $end
+$var wire 1 b a $end
+$var wire 1 0 en $end
+$var wire 1 c y $end
+$var parameter 32 d WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin en_flip_flop[2] $end
+$var parameter 3 e i $end
+$scope module a_input $end
+$var wire 1 - clk $end
+$var wire 1 f d $end
+$var wire 1 . en $end
+$var wire 1 1 reset $end
+$var parameter 32 g WIDTH $end
+$var reg 1 h q $end
+$upscope $end
+$scope module a_output $end
+$var wire 1 i a $end
+$var wire 1 * en $end
+$var wire 1 j y $end
+$var parameter 32 k WIDTH $end
+$upscope $end
+$scope module b_input $end
+$var wire 1 - clk $end
+$var wire 1 l d $end
+$var wire 1 / en $end
+$var wire 1 1 reset $end
+$var parameter 32 m WIDTH $end
+$var reg 1 n q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 o a $end
+$var wire 1 p b $end
+$var wire 1 q cin $end
+$var reg 1 r cout $end
+$var reg 1 s g $end
+$var reg 1 t p $end
+$var reg 1 u sum $end
+$upscope $end
+$scope module res_output $end
+$var wire 1 v a $end
+$var wire 1 0 en $end
+$var wire 1 w y $end
+$var parameter 32 x WIDTH $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 x
+b1 m
+b1 k
+b1 g
+b10 e
+b1 d
+b1 Y
+b1 W
+b1 S
+b1 Q
+b1 P
+b1 E
+b1 C
+b1 ?
+b0 =
+b11 <
+b11 %
+$end
+#0
+$dumpvars
+zw
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0l
+zj
+0i
+0h
+0f
+zc
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0X
+zV
+0U
+0T
+0R
+zO
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0D
+zB
+0A
+0@
+0>
+bz ;
+b0 :
+b0 9
+b0 8
+b0 7
+bz 6
+b0 5
+b0 4
+b0 3
+b0 2
+11
+00
+0/
+0.
+0-
+b0 ,
+0+
+0*
+b0 )
+0(
+b0 '
+0&
+bz $
+0#
+bz "
+1!
+$end
+#5
+1-
+#10
+0-
+#15
+1-
+01
+#20
+0-
+#25
+1N
+0!
+b1 7
+1M
+1L
+1H
+b1 8
+b1 5
+1F
+0B
+0V
+b0 $
+b0 ;
+0j
+1O
+0c
+b1 "
+b1 6
+0w
+1*
+10
+1D
+1-
+1/
+1.
+b1 ,
+b1 4
+b1 '
+#30
+1>
+0D
+1X
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b1 )
+b1 3
+b10 ,
+b10 4
+b11 '
+b1 2
+0*
+00
+1/
+1.
+0-
+#35
+1b
+0v
+1a
+0u
+0q
+0^
+1`
+0]
+1N
+0!
+0H
+1\
+b0 :
+0J
+b11 7
+1M
+0K
+1L
+b10 8
+1G
+1A
+b1 9
+1@
+0F
+b10 5
+1Z
+1B
+0V
+b1 $
+b1 ;
+0j
+1O
+1c
+b11 "
+b11 6
+0w
+1*
+10
+1-
+#40
+1b
+1v
+1]
+1a
+0`
+b111 7
+1u
+1t
+1J
+1K
+0L
+1H
+0\
+1p
+0>
+1R
+1D
+0X
+1I
+b101 8
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b10 )
+b10 3
+b1 ,
+b1 4
+b11 :
+1+
+1&
+b1 '
+b10 2
+0*
+00
+1/
+1.
+0-
+#45
+0v
+0]
+1#
+1_
+1r
+0u
+0J
+1\
+1q
+0b
+0H
+1N
+b1101 :
+1^
+0a
+0`
+b110 8
+b1 7
+1M
+0K
+0L
+1[
+1U
+0G
+0A
+0Z
+1T
+b1 5
+1F
+b10 9
+0@
+0B
+1V
+b10 $
+b10 ;
+0j
+1O
+0c
+b1 "
+b1 6
+0w
+1*
+10
+1-
+#50
+1>
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b11 )
+b11 3
+b10 '
+b11 2
+0*
+00
+1/
+1.
+0-
+#55
+1b
+1a
+1]
+0N
+0!
+b1111 :
+1J
+b10 7
+0M
+1L
+1G
+1A
+b11 9
+1@
+1B
+1V
+b11 $
+b11 ;
+0j
+0O
+1c
+b10 "
+b10 6
+0w
+1*
+10
+1-
+#60
+0b
+1v
+0#
+0a
+0_
+1`
+0r
+b100 7
+1u
+0t
+1K
+0L
+1H
+0\
+0p
+0>
+0R
+0D
+0I
+b1 8
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b0 )
+b0 3
+b0 ,
+b0 4
+b110 :
+0+
+0&
+1(
+b0 '
+b100 2
+0*
+00
+1/
+1.
+0-
+#65
+0v
+1!
+0u
+0q
+0b
+0H
+0]
+0N
+0^
+0a
+0`
+b0 8
+b0 :
+0J
+b0 7
+0M
+0K
+0L
+0[
+0U
+0G
+0A
+0T
+b0 5
+0F
+b0 9
+0@
+0B
+0V
+b0 $
+b0 ;
+0j
+0O
+0c
+b0 "
+b0 6
+0w
+1*
+10
+1-
+#70
+1>
+1R
+1f
+1D
+1X
+1l
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b111 )
+b111 3
+b111 ,
+b111 4
+1&
+0(
+b110 '
+b101 2
+0*
+00
+1/
+1.
+0-
+#75
+1]
+1q
+1#
+1J
+1K
+1^
+1_
+b1110 :
+1r
+1s
+0N
+1H
+1b
+1\
+1v
+0!
+1p
+0M
+0L
+1a
+0`
+b110 7
+1u
+0t
+b111 8
+1G
+1A
+1[
+1U
+1i
+1o
+1@
+1F
+1T
+1Z
+b111 9
+1h
+b111 5
+1n
+1B
+1V
+b111 $
+b111 ;
+1j
+0O
+1c
+b110 "
+b110 6
+1w
+1*
+10
+1-
+#80
+zB
+zV
+bz $
+bz ;
+zj
+zO
+zc
+bz "
+bz 6
+zw
+b110 2
+0*
+00
+0/
+0.
+0-
