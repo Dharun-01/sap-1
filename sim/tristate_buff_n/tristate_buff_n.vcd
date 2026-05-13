@@ -1,5 +1,5 @@
 $date
-	Sat May 09 14:49:37 2026
+	Wed May 13 13:02:41 2026
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module tristate_buff_tb $end
+$scope module tristate_buff_n_tb $end
 $var wire 1 ! tb_y $end
 $var parameter 32 " W $end
 $var reg 1 # tb_a $end
