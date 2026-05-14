@@ -1,0 +1,449 @@
+$date
+	Thu May 14 19:12:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module step_counter_tb $end
+$var wire 3 ! tb_internal_result [2:0] $end
+$var parameter 32 " W $end
+$var parameter 3 # tb_b $end
+$var reg 3 $ expected_q [2:0] $end
+$var reg 1 % tb_clk $end
+$var reg 1 & tb_reset $end
+$var integer 32 ' i [31:0] $end
+$scope module dut $end
+$var wire 3 ( b [2:0] $end
+$var wire 1 % clk $end
+$var wire 1 & reset_sig $end
+$var wire 3 ) next_result [2:0] $end
+$var wire 3 * internal_sum [2:0] $end
+$var wire 3 + internal_result [2:0] $end
+$var wire 3 , internal_b [2:0] $end
+$var wire 4 - carry [3:0] $end
+$var parameter 32 . WIDTH $end
+$var parameter 3 / internal_a $end
+$scope begin gen[0] $end
+$var parameter 2 0 i $end
+$scope module async_reset_dff $end
+$var wire 1 1 clk $end
+$var wire 1 2 d $end
+$var wire 1 & reset $end
+$var parameter 32 3 WIDTH $end
+$var reg 1 4 q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 7 cin $end
+$var reg 1 8 cout $end
+$var reg 1 9 g $end
+$var reg 1 : p $end
+$var reg 1 ; sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 < d0 $end
+$var wire 1 = d1 $end
+$var wire 1 > sel $end
+$var wire 1 ? y $end
+$var parameter 32 @ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin gen[1] $end
+$var parameter 2 A i $end
+$scope module async_reset_dff $end
+$var wire 1 B clk $end
+$var wire 1 C d $end
+$var wire 1 & reset $end
+$var parameter 32 D WIDTH $end
+$var reg 1 E q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 F a $end
+$var wire 1 G b $end
+$var wire 1 H cin $end
+$var reg 1 I cout $end
+$var reg 1 J g $end
+$var reg 1 K p $end
+$var reg 1 L sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 M d0 $end
+$var wire 1 N d1 $end
+$var wire 1 O sel $end
+$var wire 1 P y $end
+$var parameter 32 Q WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin gen[2] $end
+$var parameter 3 R i $end
+$scope module async_reset_dff $end
+$var wire 1 S clk $end
+$var wire 1 T d $end
+$var wire 1 & reset $end
+$var parameter 32 U WIDTH $end
+$var reg 1 V q $end
+$upscope $end
+$scope module fa $end
+$var wire 1 W a $end
+$var wire 1 X b $end
+$var wire 1 Y cin $end
+$var reg 1 Z cout $end
+$var reg 1 [ g $end
+$var reg 1 \ p $end
+$var reg 1 ] sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 ^ d0 $end
+$var wire 1 _ d1 $end
+$var wire 1 ` sel $end
+$var wire 1 a y $end
+$var parameter 32 b WIDTH $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 b
+b1 U
+b10 R
+b1 Q
+b1 D
+b1 A
+b1 @
+b1 3
+b0 0
+b0 /
+b11 .
+b1 #
+b11 "
+$end
+#0
+$dumpvars
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0T
+1S
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0C
+1B
+1?
+0>
+0=
+1<
+1;
+1:
+09
+08
+07
+16
+05
+04
+12
+11
+b0 -
+b1 ,
+b0 +
+b1 *
+b1 )
+b1 (
+b0 '
+1&
+0%
+b0 $
+b0 !
+$end
+#5000
+01
+0B
+0S
+1%
+#10000
+11
+1B
+1S
+0%
+#15000
+01
+0B
+0S
+1%
+#16000
+0&
+#20000
+1C
+1P
+1M
+02
+1L
+b10 )
+0?
+1H
+0<
+b10 -
+18
+b10 *
+0;
+19
+0:
+15
+b1 !
+b1 +
+14
+11
+1B
+1S
+0%
+#21000
+b1 $
+b1 '
+#25000
+01
+0B
+0S
+1%
+#30000
+0T
+0a
+12
+0^
+1C
+1?
+0]
+b11 )
+1P
+0H
+1<
+0Y
+1M
+08
+1;
+09
+1:
+b0 -
+0I
+b11 *
+1L
+1K
+05
+1F
+04
+b10 !
+b10 +
+1E
+11
+1B
+1S
+0%
+#31000
+b10 $
+b10 '
+#35000
+01
+0B
+0S
+1%
+#40000
+1T
+1a
+1^
+0C
+1]
+0P
+1Y
+0M
+02
+1I
+0L
+b100 )
+0?
+1H
+0<
+b110 -
+18
+b100 *
+0;
+19
+0:
+15
+b11 !
+b11 +
+14
+11
+1B
+1S
+0%
+#41000
+b11 $
+b11 '
+#45000
+01
+0B
+0S
+1%
+#50000
+0H
+1<
+0Y
+0M
+1^
+0T
+08
+1;
+09
+1:
+0I
+0L
+0K
+b0 -
+0Z
+b101 *
+1]
+1\
+b0 )
+0a
+05
+0F
+1W
+1`
+1O
+1>
+04
+0E
+b100 !
+b100 +
+1V
+11
+1B
+1S
+0%
+#51000
+b100 $
+b100 '
+#55000
+01
+0B
+0S
+1%
+#60000
+0^
+0T
+12
+b1 *
+0]
+0\
+0a
+b1 )
+1?
+0W
+0`
+0O
+0>
+b0 !
+b0 +
+0V
+11
+1B
+1S
+0%
+#61000
+b0 $
+b101 '
+#65000
+01
+0B
+0S
+1%
+#70000
+1C
+1P
+1M
+02
+1L
+b10 )
+0?
+1H
+0<
+b10 -
+18
+b10 *
+0;
+19
+0:
+15
+b1 !
+b1 +
+14
+11
+1B
+1S
+0%
+#71000
+b1 $
+b110 '
+#75000
+01
+0B
+0S
+1%
+#80000
+0T
+0a
+12
+0^
+1C
+1?
+0]
+b11 )
+1P
+0H
+1<
+0Y
+1M
+08
+1;
+09
+1:
+b0 -
+0I
+b11 *
+1L
+1K
+05
+1F
+04
+b10 !
+b10 +
+1E
+11
+1B
+1S
+0%
+#81000
+b111 '
