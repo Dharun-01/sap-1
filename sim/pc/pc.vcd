@@ -1,0 +1,533 @@
+$date
+	Thu May 14 14:34:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module pc_tb $end
+$var wire 4 ! tb_pc_q [3:0] $end
+$var parameter 32 " W $end
+$var parameter 1 # b0 $end
+$var parameter 1 $ b1 $end
+$var parameter 1 % b2 $end
+$var parameter 1 & b3 $end
+$var reg 4 ' expected_q [3:0] $end
+$var reg 4 ( tb_a [3:0] $end
+$var reg 1 ) tb_add_sub $end
+$var reg 1 * tb_clk $end
+$var reg 1 + tb_en_pc_in $end
+$var reg 1 , tb_en_pc_out $end
+$var reg 1 - tb_en_pc_reg $end
+$var reg 1 . tb_reset $end
+$var integer 32 / i [31:0] $end
+$scope module dut $end
+$var wire 4 0 a [3:0] $end
+$var wire 1 ) add_sub $end
+$var wire 4 1 b [3:0] $end
+$var wire 1 * clk $end
+$var wire 1 + en_pc_in $end
+$var wire 1 , en_pc_out $end
+$var wire 1 - en_pc_reg $end
+$var wire 1 . reset_sig $end
+$var wire 4 2 pc_q [3:0] $end
+$var wire 4 3 next_result [3:0] $end
+$var wire 4 4 internal_sum [3:0] $end
+$var wire 4 5 internal_result [3:0] $end
+$var wire 4 6 internal_b [3:0] $end
+$var wire 4 7 internal_a [3:0] $end
+$var wire 5 8 carry [4:0] $end
+$var parameter 32 9 WIDTH $end
+$scope begin gen[0] $end
+$var parameter 2 : i $end
+$scope module buff $end
+$var wire 1 ; a $end
+$var wire 1 , en $end
+$var wire 1 < y $end
+$var parameter 32 = WIDTH $end
+$upscope $end
+$scope module fa $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 @ cin $end
+$var reg 1 A cout $end
+$var reg 1 B g $end
+$var reg 1 C p $end
+$var reg 1 D sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 E d0 $end
+$var wire 1 F d1 $end
+$var wire 1 + sel $end
+$var wire 1 G y $end
+$var parameter 32 H WIDTH $end
+$upscope $end
+$scope module pc_reg $end
+$var wire 1 * clk $end
+$var wire 1 I d $end
+$var wire 1 - en $end
+$var wire 1 . reset $end
+$var parameter 32 J WIDTH $end
+$var reg 1 K q $end
+$upscope $end
+$upscope $end
+$scope begin gen[1] $end
+$var parameter 2 L i $end
+$scope module buff $end
+$var wire 1 M a $end
+$var wire 1 , en $end
+$var wire 1 N y $end
+$var parameter 32 O WIDTH $end
+$upscope $end
+$scope module fa $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 R cin $end
+$var reg 1 S cout $end
+$var reg 1 T g $end
+$var reg 1 U p $end
+$var reg 1 V sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 W d0 $end
+$var wire 1 X d1 $end
+$var wire 1 + sel $end
+$var wire 1 Y y $end
+$var parameter 32 Z WIDTH $end
+$upscope $end
+$scope module pc_reg $end
+$var wire 1 * clk $end
+$var wire 1 [ d $end
+$var wire 1 - en $end
+$var wire 1 . reset $end
+$var parameter 32 \ WIDTH $end
+$var reg 1 ] q $end
+$upscope $end
+$upscope $end
+$scope begin gen[2] $end
+$var parameter 3 ^ i $end
+$scope module buff $end
+$var wire 1 _ a $end
+$var wire 1 , en $end
+$var wire 1 ` y $end
+$var parameter 32 a WIDTH $end
+$upscope $end
+$scope module fa $end
+$var wire 1 b a $end
+$var wire 1 c b $end
+$var wire 1 d cin $end
+$var reg 1 e cout $end
+$var reg 1 f g $end
+$var reg 1 g p $end
+$var reg 1 h sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 i d0 $end
+$var wire 1 j d1 $end
+$var wire 1 + sel $end
+$var wire 1 k y $end
+$var parameter 32 l WIDTH $end
+$upscope $end
+$scope module pc_reg $end
+$var wire 1 * clk $end
+$var wire 1 m d $end
+$var wire 1 - en $end
+$var wire 1 . reset $end
+$var parameter 32 n WIDTH $end
+$var reg 1 o q $end
+$upscope $end
+$upscope $end
+$scope begin gen[3] $end
+$var parameter 3 p i $end
+$scope module buff $end
+$var wire 1 q a $end
+$var wire 1 , en $end
+$var wire 1 r y $end
+$var parameter 32 s WIDTH $end
+$upscope $end
+$scope module fa $end
+$var wire 1 t a $end
+$var wire 1 u b $end
+$var wire 1 v cin $end
+$var reg 1 w cout $end
+$var reg 1 x g $end
+$var reg 1 y p $end
+$var reg 1 z sum $end
+$upscope $end
+$scope module mux_inst $end
+$var wire 1 { d0 $end
+$var wire 1 | d1 $end
+$var wire 1 + sel $end
+$var wire 1 } y $end
+$var parameter 32 ~ WIDTH $end
+$upscope $end
+$scope module pc_reg $end
+$var wire 1 * clk $end
+$var wire 1 !" d $end
+$var wire 1 - en $end
+$var wire 1 . reset $end
+$var parameter 32 "" WIDTH $end
+$var reg 1 #" q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 ""
+b1 ~
+b1 s
+b11 p
+b1 n
+b1 l
+b1 a
+b10 ^
+b1 \
+b1 Z
+b1 O
+b1 L
+b1 J
+b1 H
+b1 =
+b0 :
+b100 9
+0&
+0%
+0$
+1#
+b100 "
+$end
+#0
+$dumpvars
+0#"
+0!"
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+zr
+0q
+0o
+0m
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+z`
+0_
+0]
+0[
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+zN
+0M
+0K
+1I
+1G
+0F
+1E
+1D
+1C
+0B
+0A
+0@
+1?
+0>
+z<
+0;
+b0 8
+b0 7
+b1 6
+b0 5
+b1 4
+b1 3
+bz 2
+b1 1
+b0 0
+b0 /
+1.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+bz !
+$end
+#5000
+1*
+#10000
+0*
+#15000
+1*
+#16000
+b1 '
+0.
+#17000
+0<
+0N
+0`
+b0 !
+b0 2
+0r
+1,
+1-
+#20000
+0*
+#25000
+1[
+1Y
+1W
+0I
+1V
+b10 3
+0G
+1R
+0E
+b1 !
+b1 2
+1<
+b10 8
+1A
+b10 4
+0D
+1B
+0C
+1;
+1>
+b1 5
+1K
+1*
+#26000
+z<
+zN
+z`
+bz !
+bz 2
+zr
+0,
+0-
+#30000
+0*
+#35000
+1F
+b1 7
+b1 (
+b1 0
+b10 '
+b1 /
+1*
+#36000
+1<
+0N
+0`
+b1 !
+b1 2
+0r
+1,
+1-
+#40000
+0*
+#45000
+0m
+0k
+0i
+1[
+1I
+0h
+1Y
+b11 3
+1G
+0d
+1W
+0R
+1E
+1N
+0S
+1V
+1U
+b10 !
+b10 2
+0<
+b0 8
+0A
+b11 4
+1D
+0B
+1C
+1M
+1P
+0;
+0>
+1]
+b10 5
+0K
+1*
+#46000
+z<
+zN
+z`
+bz !
+bz 2
+zr
+0,
+0-
+#50000
+0*
+#55000
+0I
+1m
+1!"
+0G
+1k
+1}
+0F
+1X
+1j
+1|
+1[
+b1110 7
+b1110 3
+1Y
+b1110 (
+b1110 0
+1+
+b1110 '
+b10 /
+1*
+#56000
+0<
+1N
+0`
+b10 !
+b10 2
+0r
+1,
+1-
+#60000
+0*
+#65000
+1{
+1i
+1z
+1y
+1r
+b1110 !
+b1110 2
+1`
+b1111 4
+1h
+1g
+1t
+1q
+1_
+1b
+1#"
+b1110 5
+1o
+1*
+#66000
+z<
+zN
+z`
+bz !
+bz 2
+zr
+0,
+0-
+#70000
+0*
+#75000
+1I
+b1111 3
+1G
+0+
+b1111 '
+b11 /
+1*
+#76000
+0<
+1N
+1`
+b1110 !
+b1110 2
+1r
+1,
+1-
+#80000
+0*
+#85000
+0!"
+0}
+0{
+0m
+1w
+0z
+0k
+1v
+0i
+0[
+1e
+0h
+0Y
+1d
+0W
+0I
+1S
+0V
+b0 3
+0G
+1R
+0E
+b1111 !
+b1111 2
+1<
+b11110 8
+1A
+b0 4
+0D
+1B
+0C
+1;
+1>
+b1111 5
+1K
+1*
+#86000
+z<
+zN
+z`
+bz !
+bz 2
+zr
+0,
+0-
+#90000
+0*
+#95000
+b100 /
+1*
