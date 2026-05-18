@@ -1,0 +1,568 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000019ef64265d0 .scope module, "memory_row_tb" "memory_row_tb" 2 3;
+ .timescale -9 -12;
+P_0000019ef641f6d0 .param/l "D" 0 2 4, +C4<00000000000000000000000000001000>;
+v0000019ef64880d0_0 .var "expected_y", 7 0;
+v0000019ef64896b0_0 .var/i "i", 31 0;
+v0000019ef6488d50_0 .var "tb_data_in", 7 0;
+v0000019ef64899d0_0 .var "tb_decoder_output_line", 0 0;
+v0000019ef6488670_0 .net "tb_mem_row_y", 7 0, L_0000019ef648aa40;  1 drivers
+v0000019ef6489a70_0 .var "tb_ram_in_sel", 0 0;
+v0000019ef6488710_0 .var "tb_ram_out_sel", 0 0;
+v0000019ef6488df0 .array "test_vectors", 3 0, 15 0;
+S_0000019ef6426760 .scope module, "dut" "memory_row" 2 15, 3 1 0, S_0000019ef64265d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "decoder_output_line";
+    .port_info 1 /INPUT 1 "ram_out_sel";
+    .port_info 2 /INPUT 1 "ram_in_sel";
+    .port_info 3 /INPUT 8 "data_in";
+    .port_info 4 /OUTPUT 8 "mem_row_y";
+P_0000019ef641f2d0 .param/l "DATA_W" 0 3 1, +C4<00000000000000000000000000001000>;
+v0000019ef6488170_0 .net "data_in", 7 0, v0000019ef6488d50_0;  1 drivers
+v0000019ef64883f0_0 .net "decoder_output_line", 0 0, v0000019ef64899d0_0;  1 drivers
+v0000019ef6488350_0 .net "mem_row_y", 7 0, L_0000019ef648aa40;  alias, 1 drivers
+v0000019ef6489e30_0 .net "memory_cell_and_gate_output", 7 0, L_0000019ef648afe0;  1 drivers
+v0000019ef64885d0_0 .net "memory_cell_output", 7 0, L_0000019ef648a360;  1 drivers
+v0000019ef6489930_0 .net "ram_in_decoder_line_output", 0 0, L_0000019ef648ae00;  1 drivers
+v0000019ef64897f0_0 .net "ram_in_sel", 0 0, v0000019ef6489a70_0;  1 drivers
+v0000019ef6489ed0_0 .net "ram_out_sel", 0 0, v0000019ef6488710_0;  1 drivers
+L_0000019ef6488210 .part v0000019ef6488d50_0, 0, 1;
+L_0000019ef6488490 .part L_0000019ef648a360, 0, 1;
+L_0000019ef6489c50 .part L_0000019ef648afe0, 0, 1;
+L_0000019ef64887b0 .part v0000019ef6488d50_0, 1, 1;
+L_0000019ef6489610 .part L_0000019ef648a360, 1, 1;
+L_0000019ef6488990 .part L_0000019ef648afe0, 1, 1;
+L_0000019ef6488a30 .part v0000019ef6488d50_0, 2, 1;
+L_0000019ef6488e90 .part L_0000019ef648a360, 2, 1;
+L_0000019ef6488fd0 .part L_0000019ef648afe0, 2, 1;
+L_0000019ef6489110 .part v0000019ef6488d50_0, 3, 1;
+L_0000019ef64892f0 .part L_0000019ef648a360, 3, 1;
+L_0000019ef6489750 .part L_0000019ef648afe0, 3, 1;
+L_0000019ef6489890 .part v0000019ef6488d50_0, 4, 1;
+L_0000019ef648b080 .part L_0000019ef648a360, 4, 1;
+L_0000019ef648a400 .part L_0000019ef648afe0, 4, 1;
+L_0000019ef648b300 .part v0000019ef6488d50_0, 5, 1;
+L_0000019ef648b800 .part L_0000019ef648a360, 5, 1;
+L_0000019ef648af40 .part L_0000019ef648afe0, 5, 1;
+L_0000019ef648a540 .part v0000019ef6488d50_0, 6, 1;
+L_0000019ef648bd00 .part L_0000019ef648a360, 6, 1;
+L_0000019ef648b3a0 .part L_0000019ef648afe0, 6, 1;
+L_0000019ef648bf80 .part v0000019ef6488d50_0, 7, 1;
+LS_0000019ef648a360_0_0 .concat8 [ 1 1 1 1], v0000019ef6418b80_0, v0000019ef64182c0_0, v0000019ef63f01d0_0, v0000019ef64826d0_0;
+LS_0000019ef648a360_0_4 .concat8 [ 1 1 1 1], v0000019ef6483030_0, v0000019ef64835d0_0, v0000019ef6482d10_0, v0000019ef6489390_0;
+L_0000019ef648a360 .concat8 [ 4 4 0 0], LS_0000019ef648a360_0_0, LS_0000019ef648a360_0_4;
+L_0000019ef648a0e0 .part L_0000019ef648a360, 7, 1;
+LS_0000019ef648afe0_0_0 .concat8 [ 1 1 1 1], L_0000019ef6489070, L_0000019ef6489bb0, L_0000019ef6488ad0, L_0000019ef64891b0;
+LS_0000019ef648afe0_0_4 .concat8 [ 1 1 1 1], L_0000019ef648ad60, L_0000019ef648a4a0, L_0000019ef648a2c0, L_0000019ef648bbc0;
+L_0000019ef648afe0 .concat8 [ 4 4 0 0], LS_0000019ef648afe0_0_0, LS_0000019ef648afe0_0_4;
+L_0000019ef648a7c0 .part L_0000019ef648afe0, 7, 1;
+LS_0000019ef648aa40_0_0 .concat8 [ 1 1 1 1], L_0000019ef6488530, L_0000019ef64888f0, L_0000019ef6488f30, L_0000019ef64894d0;
+LS_0000019ef648aa40_0_4 .concat8 [ 1 1 1 1], L_0000019ef648a860, L_0000019ef648bb20, L_0000019ef648a900, L_0000019ef648a9a0;
+L_0000019ef648aa40 .concat8 [ 4 4 0 0], LS_0000019ef648aa40_0_0, LS_0000019ef648aa40_0_4;
+L_0000019ef648b8a0 .concat [ 1 1 0 0], v0000019ef6489a70_0, v0000019ef64899d0_0;
+S_0000019ef6426d30 .scope generate, "gen_memory_cell[0]" "gen_memory_cell[0]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef641edd0 .param/l "i" 0 3 11, +C4<00>;
+v0000019ef6418180_0 .net *"_ivl_3", 0 0, L_0000019ef6488490;  1 drivers
+L_0000019ef6489b10 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef6488490;
+S_0000019ef6426ec0 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef6426d30;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef641f750 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6418fe0_0 .net "a", 1 0, L_0000019ef6489b10;  1 drivers
+v0000019ef6419760_0 .net "y", 0 0, L_0000019ef6489070;  1 drivers
+L_0000019ef6489070 .reduce/and L_0000019ef6489b10;
+S_0000019ef63ff940 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef6426d30;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef641f150 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef64180e0_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6418040_0 .net "d", 0 0, L_0000019ef6488210;  1 drivers
+v0000019ef6418b80_0 .var "q", 0 0;
+L_0000019ef64b0088 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6419260_0 .net "reset", 0 0, L_0000019ef64b0088;  1 drivers
+E_0000019ef641f250 .event posedge, v0000019ef6419260_0, v0000019ef64180e0_0;
+S_0000019ef63ffad0 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef6426d30;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef641f790 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef6429978 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef64184a0_0 name=_ivl_0
+v0000019ef6419d00_0 .net "a", 0 0, L_0000019ef6489c50;  1 drivers
+v0000019ef6419da0_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef64187c0_0 .net "y", 0 0, L_0000019ef6488530;  1 drivers
+L_0000019ef6488530 .functor MUXZ 1, o0000019ef6429978, L_0000019ef6489c50, v0000019ef6488710_0, C4<>;
+S_0000019ef63c24d0 .scope generate, "gen_memory_cell[1]" "gen_memory_cell[1]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef641f890 .param/l "i" 0 3 11, +C4<01>;
+v0000019ef63efd70_0 .net *"_ivl_3", 0 0, L_0000019ef6489610;  1 drivers
+L_0000019ef6488850 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef6489610;
+S_0000019ef63c2660 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef63c24d0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef641f910 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6418220_0 .net "a", 1 0, L_0000019ef6488850;  1 drivers
+v0000019ef6418c20_0 .net "y", 0 0, L_0000019ef6489bb0;  1 drivers
+L_0000019ef6489bb0 .reduce/and L_0000019ef6488850;
+S_0000019ef63aeb00 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef63c24d0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef641f190 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef6419120_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6418cc0_0 .net "d", 0 0, L_0000019ef64887b0;  1 drivers
+v0000019ef64182c0_0 .var "q", 0 0;
+L_0000019ef64b00d0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6418860_0 .net "reset", 0 0, L_0000019ef64b00d0;  1 drivers
+E_0000019ef641f450 .event posedge, v0000019ef6418860_0, v0000019ef64180e0_0;
+S_0000019ef63aec90 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef63c24d0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef641f9d0 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef6429d08 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef6418e00_0 name=_ivl_0
+v0000019ef6418ea0_0 .net "a", 0 0, L_0000019ef6488990;  1 drivers
+v0000019ef6418f40_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef6419300_0 .net "y", 0 0, L_0000019ef64888f0;  1 drivers
+L_0000019ef64888f0 .functor MUXZ 1, o0000019ef6429d08, L_0000019ef6488990, v0000019ef6488710_0, C4<>;
+S_0000019ef63aee20 .scope generate, "gen_memory_cell[2]" "gen_memory_cell[2]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef641ed90 .param/l "i" 0 3 11, +C4<010>;
+v0000019ef64823b0_0 .net *"_ivl_3", 0 0, L_0000019ef6488e90;  1 drivers
+L_0000019ef6489250 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef6488e90;
+S_0000019ef6414f30 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef63aee20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef641f950 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef63ef910_0 .net "a", 1 0, L_0000019ef6489250;  1 drivers
+v0000019ef63efff0_0 .net "y", 0 0, L_0000019ef6488ad0;  1 drivers
+L_0000019ef6488ad0 .reduce/and L_0000019ef6489250;
+S_0000019ef64150c0 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef63aee20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef641fa10 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef63f0090_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef63efaf0_0 .net "d", 0 0, L_0000019ef6488a30;  1 drivers
+v0000019ef63f01d0_0 .var "q", 0 0;
+L_0000019ef64b0118 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef63f0310_0 .net "reset", 0 0, L_0000019ef64b0118;  1 drivers
+E_0000019ef641fa50 .event posedge, v0000019ef63f0310_0, v0000019ef64180e0_0;
+S_0000019ef6415250 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef63aee20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef641ee50 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642a068 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef63f04f0_0 name=_ivl_0
+v0000019ef63f03b0_0 .net "a", 0 0, L_0000019ef6488fd0;  1 drivers
+v0000019ef63f0630_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef64824f0_0 .net "y", 0 0, L_0000019ef6488f30;  1 drivers
+L_0000019ef6488f30 .functor MUXZ 1, o0000019ef642a068, L_0000019ef6488fd0, v0000019ef6488710_0, C4<>;
+S_0000019ef6428560 .scope generate, "gen_memory_cell[3]" "gen_memory_cell[3]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef641fad0 .param/l "i" 0 3 11, +C4<011>;
+v0000019ef64830d0_0 .net *"_ivl_3", 0 0, L_0000019ef64892f0;  1 drivers
+L_0000019ef6489430 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef64892f0;
+S_0000019ef64286f0 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef6428560;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef641fb10 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6482590_0 .net "a", 1 0, L_0000019ef6489430;  1 drivers
+v0000019ef64838f0_0 .net "y", 0 0, L_0000019ef64891b0;  1 drivers
+L_0000019ef64891b0 .reduce/and L_0000019ef6489430;
+S_0000019ef6428880 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef6428560;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef641ef10 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef6482450_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6482630_0 .net "d", 0 0, L_0000019ef6489110;  1 drivers
+v0000019ef64826d0_0 .var "q", 0 0;
+L_0000019ef64b0160 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6482770_0 .net "reset", 0 0, L_0000019ef64b0160;  1 drivers
+E_0000019ef641ef90 .event posedge, v0000019ef6482770_0, v0000019ef64180e0_0;
+S_0000019ef6484eb0 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef6428560;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef63f0f60 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642a3c8 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef6482e50_0 name=_ivl_0
+v0000019ef6483c10_0 .net "a", 0 0, L_0000019ef6489750;  1 drivers
+v0000019ef6482ef0_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef6482950_0 .net "y", 0 0, L_0000019ef64894d0;  1 drivers
+L_0000019ef64894d0 .functor MUXZ 1, o0000019ef642a3c8, L_0000019ef6489750, v0000019ef6488710_0, C4<>;
+S_0000019ef6484b90 .scope generate, "gen_memory_cell[4]" "gen_memory_cell[4]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef63f1860 .param/l "i" 0 3 11, +C4<0100>;
+v0000019ef64837b0_0 .net *"_ivl_3", 0 0, L_0000019ef648b080;  1 drivers
+L_0000019ef648b9e0 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef648b080;
+S_0000019ef6484870 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef6484b90;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef63f13a0 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6482f90_0 .net "a", 1 0, L_0000019ef648b9e0;  1 drivers
+v0000019ef6482270_0 .net "y", 0 0, L_0000019ef648ad60;  1 drivers
+L_0000019ef648ad60 .reduce/and L_0000019ef648b9e0;
+S_0000019ef6484230 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef6484b90;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef63f1220 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef64833f0_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6482810_0 .net "d", 0 0, L_0000019ef6489890;  1 drivers
+v0000019ef6483030_0 .var "q", 0 0;
+L_0000019ef64b01a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6483490_0 .net "reset", 0 0, L_0000019ef64b01a8;  1 drivers
+E_0000019ef63f0c20 .event posedge, v0000019ef6483490_0, v0000019ef64180e0_0;
+S_0000019ef6484d20 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef6484b90;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef63f1320 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642a728 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef6483cb0_0 name=_ivl_0
+v0000019ef6483530_0 .net "a", 0 0, L_0000019ef648a400;  1 drivers
+v0000019ef6482a90_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef64832b0_0 .net "y", 0 0, L_0000019ef648a860;  1 drivers
+L_0000019ef648a860 .functor MUXZ 1, o0000019ef642a728, L_0000019ef648a400, v0000019ef6488710_0, C4<>;
+S_0000019ef64840a0 .scope generate, "gen_memory_cell[5]" "gen_memory_cell[5]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef63f1760 .param/l "i" 0 3 11, +C4<0101>;
+v0000019ef6482bd0_0 .net *"_ivl_3", 0 0, L_0000019ef648b800;  1 drivers
+L_0000019ef648acc0 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef648b800;
+S_0000019ef6484a00 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef64840a0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef63f1060 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6483d50_0 .net "a", 1 0, L_0000019ef648acc0;  1 drivers
+v0000019ef6483170_0 .net "y", 0 0, L_0000019ef648a4a0;  1 drivers
+L_0000019ef648a4a0 .reduce/and L_0000019ef648acc0;
+S_0000019ef64843c0 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef64840a0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef63f1120 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef6483ad0_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6482db0_0 .net "d", 0 0, L_0000019ef648b300;  1 drivers
+v0000019ef64835d0_0 .var "q", 0 0;
+L_0000019ef64b01f0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6482b30_0 .net "reset", 0 0, L_0000019ef64b01f0;  1 drivers
+E_0000019ef63f0ea0 .event posedge, v0000019ef6482b30_0, v0000019ef64180e0_0;
+S_0000019ef6484550 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef64840a0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef63f0960 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642aa88 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef64828b0_0 name=_ivl_0
+v0000019ef6483670_0 .net "a", 0 0, L_0000019ef648af40;  1 drivers
+v0000019ef64829f0_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef64821d0_0 .net "y", 0 0, L_0000019ef648bb20;  1 drivers
+L_0000019ef648bb20 .functor MUXZ 1, o0000019ef642aa88, L_0000019ef648af40, v0000019ef6488710_0, C4<>;
+S_0000019ef64846e0 .scope generate, "gen_memory_cell[6]" "gen_memory_cell[6]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef63f1820 .param/l "i" 0 3 11, +C4<0110>;
+v0000019ef6483e90_0 .net *"_ivl_3", 0 0, L_0000019ef648bd00;  1 drivers
+L_0000019ef648ba80 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef648bd00;
+S_0000019ef6486690 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef64846e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef63f1720 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6483710_0 .net "a", 1 0, L_0000019ef648ba80;  1 drivers
+v0000019ef6482c70_0 .net "y", 0 0, L_0000019ef648a2c0;  1 drivers
+L_0000019ef648a2c0 .reduce/and L_0000019ef648ba80;
+S_0000019ef6486cd0 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef64846e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef63f14a0 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef6483b70_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6483210_0 .net "d", 0 0, L_0000019ef648a540;  1 drivers
+v0000019ef6482d10_0 .var "q", 0 0;
+L_0000019ef64b0238 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6483350_0 .net "reset", 0 0, L_0000019ef64b0238;  1 drivers
+E_0000019ef63f1160 .event posedge, v0000019ef6483350_0, v0000019ef64180e0_0;
+S_0000019ef64861e0 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef64846e0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef63f0b60 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642ade8 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef6483850_0 name=_ivl_0
+v0000019ef6483990_0 .net "a", 0 0, L_0000019ef648b3a0;  1 drivers
+v0000019ef6483a30_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef6483df0_0 .net "y", 0 0, L_0000019ef648a900;  1 drivers
+L_0000019ef648a900 .functor MUXZ 1, o0000019ef642ade8, L_0000019ef648b3a0, v0000019ef6488710_0, C4<>;
+S_0000019ef6486820 .scope generate, "gen_memory_cell[7]" "gen_memory_cell[7]" 3 11, 3 11 0, S_0000019ef6426760;
+ .timescale 0 0;
+P_0000019ef63f09e0 .param/l "i" 0 3 11, +C4<0111>;
+v0000019ef6488cb0_0 .net *"_ivl_3", 0 0, L_0000019ef648a0e0;  1 drivers
+L_0000019ef648bda0 .concat [ 1 1 0 0], v0000019ef64899d0_0, L_0000019ef648a0e0;
+S_0000019ef6486b40 .scope module, "and_inst" "and_n" 3 14, 4 1 0, S_0000019ef6486820;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef63f0a60 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6483f30_0 .net "a", 1 0, L_0000019ef648bda0;  1 drivers
+v0000019ef6482090_0 .net "y", 0 0, L_0000019ef648bbc0;  1 drivers
+L_0000019ef648bbc0 .reduce/and L_0000019ef648bda0;
+S_0000019ef6486e60 .scope module, "memory_cell_inst" "async_resettable_dff" 3 12, 5 1 0, S_0000019ef6486820;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+P_0000019ef63f1020 .param/l "WIDTH" 0 5 1, +C4<00000000000000000000000000000001>;
+v0000019ef6482130_0 .net "clk", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+v0000019ef6482310_0 .net "d", 0 0, L_0000019ef648bf80;  1 drivers
+v0000019ef6489390_0 .var "q", 0 0;
+L_0000019ef64b0280 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000019ef6488c10_0 .net "reset", 0 0, L_0000019ef64b0280;  1 drivers
+E_0000019ef63f0ee0 .event posedge, v0000019ef6488c10_0, v0000019ef64180e0_0;
+S_0000019ef64850b0 .scope module, "tristate_inst" "tristate_buff_n" 3 16, 6 1 0, S_0000019ef6486820;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /OUTPUT 1 "y";
+P_0000019ef63f11a0 .param/l "WIDTH" 0 6 1, +C4<00000000000000000000000000000001>;
+o0000019ef642b148 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0000019ef6488b70_0 name=_ivl_0
+v0000019ef6489f70_0 .net "a", 0 0, L_0000019ef648a7c0;  1 drivers
+v0000019ef6489cf0_0 .net "en", 0 0, v0000019ef6488710_0;  alias, 1 drivers
+v0000019ef6489d90_0 .net "y", 0 0, L_0000019ef648a9a0;  1 drivers
+L_0000019ef648a9a0 .functor MUXZ 1, o0000019ef642b148, L_0000019ef648a7c0, v0000019ef6488710_0, C4<>;
+S_0000019ef6486370 .scope module, "ram_in_control_inst" "and_n" 3 7, 4 1 0, S_0000019ef6426760;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "a";
+    .port_info 1 /OUTPUT 1 "y";
+P_0000019ef63f0ca0 .param/l "WIDTH" 0 4 1, +C4<00000000000000000000000000000010>;
+v0000019ef6489570_0 .net "a", 1 0, L_0000019ef648b8a0;  1 drivers
+v0000019ef64882b0_0 .net "y", 0 0, L_0000019ef648ae00;  alias, 1 drivers
+L_0000019ef648ae00 .reduce/and L_0000019ef648b8a0;
+    .scope S_0000019ef63ff940;
+T_0 ;
+    %wait E_0000019ef641f250;
+    %load/vec4 v0000019ef6419260_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef6418b80_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0000019ef6418040_0;
+    %assign/vec4 v0000019ef6418b80_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000019ef63aeb00;
+T_1 ;
+    %wait E_0000019ef641f450;
+    %load/vec4 v0000019ef6418860_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef64182c0_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0000019ef6418cc0_0;
+    %assign/vec4 v0000019ef64182c0_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000019ef64150c0;
+T_2 ;
+    %wait E_0000019ef641fa50;
+    %load/vec4 v0000019ef63f0310_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef63f01d0_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v0000019ef63efaf0_0;
+    %assign/vec4 v0000019ef63f01d0_0, 0;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0000019ef6428880;
+T_3 ;
+    %wait E_0000019ef641ef90;
+    %load/vec4 v0000019ef6482770_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_3.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef64826d0_0, 0;
+    %jmp T_3.1;
+T_3.0 ;
+    %load/vec4 v0000019ef6482630_0;
+    %assign/vec4 v0000019ef64826d0_0, 0;
+T_3.1 ;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0000019ef6484230;
+T_4 ;
+    %wait E_0000019ef63f0c20;
+    %load/vec4 v0000019ef6483490_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef6483030_0, 0;
+    %jmp T_4.1;
+T_4.0 ;
+    %load/vec4 v0000019ef6482810_0;
+    %assign/vec4 v0000019ef6483030_0, 0;
+T_4.1 ;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0000019ef64843c0;
+T_5 ;
+    %wait E_0000019ef63f0ea0;
+    %load/vec4 v0000019ef6482b30_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_5.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef64835d0_0, 0;
+    %jmp T_5.1;
+T_5.0 ;
+    %load/vec4 v0000019ef6482db0_0;
+    %assign/vec4 v0000019ef64835d0_0, 0;
+T_5.1 ;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0000019ef6486cd0;
+T_6 ;
+    %wait E_0000019ef63f1160;
+    %load/vec4 v0000019ef6483350_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_6.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef6482d10_0, 0;
+    %jmp T_6.1;
+T_6.0 ;
+    %load/vec4 v0000019ef6483210_0;
+    %assign/vec4 v0000019ef6482d10_0, 0;
+T_6.1 ;
+    %jmp T_6;
+    .thread T_6;
+    .scope S_0000019ef6486e60;
+T_7 ;
+    %wait E_0000019ef63f0ee0;
+    %load/vec4 v0000019ef6488c10_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_7.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0000019ef6489390_0, 0;
+    %jmp T_7.1;
+T_7.0 ;
+    %load/vec4 v0000019ef6482310_0;
+    %assign/vec4 v0000019ef6489390_0, 0;
+T_7.1 ;
+    %jmp T_7;
+    .thread T_7;
+    .scope S_0000019ef64265d0;
+T_8 ;
+    %vpi_call 2 19 "$dumpfile", "sim/memory_row/memory_row.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000019ef64265d0 {0 0 0};
+    %vpi_call 2 21 "$readmemb", "rtl/lib/memory_row/memory_row.tv", v0000019ef6488df0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef64899d0_0, 0, 1;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0000019ef64880d0_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef6489a70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef6488710_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000019ef64896b0_0, 0, 32;
+T_8.0 ;
+    %load/vec4 v0000019ef64896b0_0;
+    %cmpi/s 4, 0, 32;
+    %jmp/0xz T_8.1, 5;
+    %ix/getv/s 4, v0000019ef64896b0_0;
+    %load/vec4a v0000019ef6488df0, 4;
+    %split/vec4 8;
+    %store/vec4 v0000019ef64880d0_0, 0, 8;
+    %store/vec4 v0000019ef6488d50_0, 0, 8;
+    %delay 1000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019ef64899d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019ef6489a70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019ef6488710_0, 0, 1;
+    %delay 9000, 0;
+    %load/vec4 v0000019ef64880d0_0;
+    %load/vec4 v0000019ef6488670_0;
+    %cmp/ne;
+    %jmp/0xz  T_8.2, 6;
+    %vpi_call 2 40 "$display", "Test %0d Failed: Expected y = %b, Actual y = %b", v0000019ef64896b0_0, v0000019ef64880d0_0, v0000019ef6488670_0 {0 0 0};
+    %jmp T_8.3;
+T_8.2 ;
+    %vpi_call 2 42 "$display", "Test %0d Passed: Expected y = %b, Actual y = %b", v0000019ef64896b0_0, v0000019ef64880d0_0, v0000019ef6488670_0 {0 0 0};
+T_8.3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef64899d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef6489a70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019ef6488710_0, 0, 1;
+    %delay 10000, 0;
+    %load/vec4 v0000019ef64896b0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000019ef64896b0_0, 0, 32;
+    %jmp T_8.0;
+T_8.1 ;
+    %vpi_call 2 50 "$display", "All Test cases completed." {0 0 0};
+    %vpi_call 2 51 "$finish" {0 0 0};
+    %end;
+    .thread T_8;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "rtl/lib/memory_row/memory_row_tb.v";
+    "rtl/lib/memory_row/memory_row.v";
+    "rtl/lib/gates/and/and_n.v";
+    "rtl/lib/async_resettable_dff/async_resettable_dff.v";
+    "rtl/lib/tristate_buff_n/tristate_buff_n.v";
