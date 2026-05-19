@@ -1,0 +1,519 @@
+$date
+	Tue May 19 16:21:52 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module control_unit_tb $end
+$var wire 1 ! tb_en_reset_step_counter $end
+$var wire 1 " tb_en_ras_in $end
+$var wire 1 # tb_en_ram_out $end
+$var wire 1 $ tb_en_ram_in $end
+$var wire 1 % tb_en_pc_out $end
+$var wire 1 & tb_en_pc_latcher $end
+$var wire 1 ' tb_en_pc_in $end
+$var wire 1 ( tb_en_out_in $end
+$var wire 1 ) tb_en_ir_out $end
+$var wire 1 * tb_en_ir_in $end
+$var wire 1 + tb_en_hlt $end
+$var wire 1 , tb_en_b_in $end
+$var wire 1 - tb_en_alu_out $end
+$var wire 1 . tb_en_add_sub $end
+$var wire 1 / tb_en_a_out $end
+$var wire 1 0 tb_en_a_in $end
+$var wire 16 1 actual_ctrl_word [15:0] $end
+$var reg 16 2 expected_ctrl_word [15:0] $end
+$var reg 2 3 tb_flags [1:0] $end
+$var reg 4 4 tb_opcode [3:0] $end
+$var reg 1 5 tb_reset $end
+$var reg 3 6 tb_step [2:0] $end
+$var integer 32 7 i [31:0] $end
+$scope module dut $end
+$var wire 2 8 flag [1:0] $end
+$var wire 4 9 opcode [3:0] $end
+$var wire 1 5 reset $end
+$var wire 3 : step [2:0] $end
+$var parameter 4 ; OP_ADD $end
+$var parameter 4 < OP_HLT $end
+$var parameter 4 = OP_JC $end
+$var parameter 4 > OP_JMP $end
+$var parameter 4 ? OP_JZ $end
+$var parameter 4 @ OP_LDA $end
+$var parameter 4 A OP_LDI $end
+$var parameter 4 B OP_OUT $end
+$var parameter 4 C OP_STA $end
+$var parameter 4 D OP_SUB $end
+$var parameter 3 E T0 $end
+$var parameter 3 F T1 $end
+$var parameter 3 G T2 $end
+$var parameter 3 H T3 $end
+$var parameter 3 I T4 $end
+$var reg 1 0 en_a_in $end
+$var reg 1 / en_a_out $end
+$var reg 1 . en_add_sub $end
+$var reg 1 - en_alu_out $end
+$var reg 1 , en_b_in $end
+$var reg 1 + en_hlt $end
+$var reg 1 * en_ir_in $end
+$var reg 1 ) en_ir_out $end
+$var reg 1 ( en_out_in $end
+$var reg 1 ' en_pc_in $end
+$var reg 1 & en_pc_latcher $end
+$var reg 1 % en_pc_out $end
+$var reg 1 $ en_ram_in $end
+$var reg 1 # en_ram_out $end
+$var reg 1 " en_ras_in $end
+$var reg 1 ! en_reset_step_counter $end
+$scope task clear_control_word $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 I
+b11 H
+b10 G
+b1 F
+b0 E
+b11 D
+b100 C
+b1000 B
+b1 A
+b0 @
+b111 ?
+b101 >
+b110 =
+b1001 <
+b10 ;
+$end
+#0
+$dumpvars
+b0 :
+b10 9
+b0 8
+b0 7
+b0 6
+15
+b10 4
+b0 3
+b0 2
+b0 1
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#2000
+1"
+b10000010000000 1
+1%
+b10000010000000 2
+05
+b0 4
+b0 9
+b1 7
+#4000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b10 7
+#6000
+1"
+1)
+0&
+0#
+b1010000000000000 1
+0*
+b1010000000000000 2
+b10 6
+b10 :
+b11 7
+#8000
+1!
+10
+1#
+0"
+b1100000000001 1
+0)
+b1100000000001 2
+b11 6
+b11 :
+b100 7
+#10000
+1"
+1%
+0!
+0#
+b10000010000000 1
+00
+b10000010000000 2
+b0 6
+b0 :
+b1 4
+b1 9
+b101 7
+#12000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b110 7
+#14000
+1!
+10
+1)
+0&
+0#
+b1001000000000001 1
+0*
+b1001000000000001 2
+b10 6
+b10 :
+b111 7
+#16000
+1"
+1%
+0!
+00
+b10000010000000 1
+0)
+b10000010000000 2
+b0 6
+b0 :
+b10 4
+b10 9
+b1000 7
+#18000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b1001 7
+#20000
+1"
+1)
+0&
+0#
+b1010000000000000 1
+0*
+b1010000000000000 2
+b10 6
+b10 :
+b1010 7
+#22000
+1,
+1#
+0"
+b101000000000 1
+0)
+b101000000000 2
+b11 6
+b11 :
+b1011 7
+#24000
+1!
+10
+1-
+0,
+b1000000001001 1
+0#
+b1000000001001 2
+b100 6
+b100 :
+b1100 7
+#26000
+1"
+1%
+0!
+0-
+b10000010000000 1
+00
+b10000010000000 2
+b0 6
+b0 :
+b11 4
+b11 9
+b1101 7
+#28000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b1110 7
+#30000
+1"
+1)
+0&
+0#
+b1010000000000000 1
+0*
+b1010000000000000 2
+b10 6
+b10 :
+b1111 7
+#32000
+1,
+1#
+0"
+b101000000000 1
+0)
+b101000000000 2
+b11 6
+b11 :
+b10000 7
+#34000
+1!
+1.
+10
+1-
+0,
+b1000000101001 1
+0#
+b1000000101001 2
+b100 6
+b100 :
+b10001 7
+#36000
+1"
+1%
+0!
+0-
+0.
+b10000010000000 1
+00
+b10000010000000 2
+b0 6
+b0 :
+b100 4
+b100 9
+b10010 7
+#38000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b10011 7
+#40000
+1"
+1)
+0&
+0#
+b1010000000000000 1
+0*
+b1010000000000000 2
+b10 6
+b10 :
+b10100 7
+#42000
+1!
+1$
+1/
+0"
+b10001000001 1
+0)
+b10001000001 2
+b11 6
+b11 :
+b10101 7
+#44000
+1"
+1%
+0!
+0$
+b10000010000000 1
+0/
+b10000010000000 2
+b0 6
+b0 :
+b101 4
+b101 9
+b10110 7
+#46000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b10111 7
+#48000
+1!
+1'
+1)
+1&
+0#
+b1000000100000011 1
+0*
+b1000000100000011 2
+b10 6
+b10 :
+b11000 7
+#50000
+1!
+0&
+0'
+b1 1
+0)
+b1 2
+b110 4
+b110 9
+b11001 7
+#52000
+1&
+1'
+1)
+b1000000100000011 1
+1!
+b1000000100000011 2
+b10 3
+b10 8
+b11010 7
+#54000
+1!
+0&
+0'
+b1 1
+0)
+b1 2
+b0 3
+b0 8
+b111 4
+b111 9
+b11011 7
+#56000
+1&
+1'
+1)
+b1000000100000011 1
+1!
+b1000000100000011 2
+b1 3
+b1 8
+b11100 7
+#58000
+1"
+1%
+0!
+0&
+0'
+b10000010000000 1
+0)
+b10000010000000 2
+b0 3
+b0 8
+b0 6
+b0 :
+b1000 4
+b1000 9
+b11101 7
+#60000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b11110 7
+#62000
+1!
+1(
+1/
+0&
+0#
+b10000000101 1
+0*
+b10000000101 2
+b10 6
+b10 :
+b11111 7
+#64000
+1"
+1%
+0!
+0(
+b10000010000000 1
+0/
+b10000010000000 2
+b0 6
+b0 :
+b1001 4
+b1001 9
+b100000 7
+#66000
+1&
+1*
+1#
+0%
+b100100000000010 1
+0"
+b100100000000010 2
+b1 6
+b1 :
+b100001 7
+#68000
+1+
+0&
+0#
+b10000 1
+0*
+b10000 2
+b10 6
+b10 :
+b100010 7
+#70000
+b0 1
+0+
+b0 2
+b1111 4
+b1111 9
+b100011 7
+#72000
+b100100 7
