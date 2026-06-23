@@ -1,0 +1,14 @@
+// Format: enIrIn(1)_enIrOut(1)_instrData(8)_expectedViewBus(8)
+
+// WORD_LENGTH: 18
+
+ 
+ 1_0_0101_0101_zzzz_zzzz // latch the value into the instruction register
+ 0_1_0101_0101_zzzz_0101 // write the latched in value to the BUS
+
+ 1_0_1111_0000_zzzz_zzzz // latch the value into the instruction register
+ 0_1_1111_0000_zzzz_0000 // write the latched in value to the BUS
+
+ 1_0_0001_0001_zzzz_zzzz // latch the value into the instruction register
+ 0_1_0001_0001_zzzz_0001 // write the latched in value to the BUS
+
