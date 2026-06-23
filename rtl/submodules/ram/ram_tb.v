@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module ram_tb();
 parameter ADDR_W = 4;
 parameter DATA_W = 8;
@@ -11,12 +13,10 @@ reg tb_clk;
 reg tb_en_data_mode_switcher; 
 reg tb_en_addr_mode_switcher;
 reg tb_en_ram_in;
-reg tb_en_ram_out;
-reg tb_step_1;
 reg tb_en_manual_ram_in;
 reg tb_ram_in_control_line;
 
-reg [36:0] test_vectors [0:6];
+reg [36:0] test_vectors [0:5];
 reg [DATA_W-1:0] expected_y;
 wire [DATA_W-1:0] tb_ram_y;
 
@@ -29,8 +29,6 @@ ram #(.ADDR_WIDTH(ADDR_W), .DATA_WIDTH(DATA_W)) dut (
   .en_data_mode_switcher(tb_en_data_mode_switcher), 
   .en_addr_mode_switcher(tb_en_addr_mode_switcher),
   .en_ram_in(tb_en_ram_in),
-  .en_ram_out(tb_en_ram_out),
-  .step_1(tb_step_1),
   .en_manual_ram_in(tb_en_manual_ram_in),
   .ram_in_control_line(tb_ram_in_control_line),
   .ram_y(tb_ram_y)
@@ -46,7 +44,18 @@ initial begin
 
  $readmemb("rtl/submodules/ram/ram.tv", test_vectors);
  
- for (i = 0; i < 7; i = i + 1) begin 
+ tb_en_data_mode_switcher = 1'b0;
+ tb_en_addr_mode_switcher = 1'b0;
+ tb_en_ram_in             = 1'b0;
+ tb_en_manual_ram_in      = 1'b0;
+ tb_ram_in_control_line   = 1'b0;
+ expected_y               = {DATA_W{1'b0}};
+ tb_addr                  = {ADDR_W{1'b0}};
+ tb_data                  = {DATA_W{1'b0}};
+ tb_manual_addr           = {ADDR_W{1'b0}};
+ tb_manual_data           = {DATA_W{1'b0}};
+
+ for (i = 0; i < 6; i = i + 1) begin 
   @ (negedge tb_clk); 
 
  // Explicitly slicing the 37-bit vector to prevent assignment race conditions
@@ -63,15 +72,7 @@ initial begin
     
     expected_y                = test_vectors[i][7:0];
    
-   // Assign read controls based on expected outputs
-        if (expected_y === 8'bZZZZZZZZ) begin
-            tb_en_ram_out = 1'b0;
-            tb_step_1     = 1'b0;
-        end else begin
-            tb_en_ram_out = 1'b1; // Turn on tri-states during verification reads
-            tb_step_1     = 1'b0;
-        end
-        // 2. Wait for the Rising Edge where values latch, then evaluate output
+     // 2. Wait for the Rising Edge where values latch, then evaluate output
         @(posedge tb_clk);
         #2; // Small delay to allow combinatorial signals to settle
         
