@@ -10,7 +10,7 @@ parameter [0:0] b2 = 1'b0;
 parameter [0:0] b3 = 1'b0;
 
 reg [W-1:0] tb_a;
-reg tb_clk, tb_reset, tb_add_sub, tb_en_pc_in, tb_en_pc_reg, tb_en_pc_out;
+reg tb_clk, tb_reset, tb_add_sub, tb_en_pc_in, tb_en_pc_reg;
 wire [W-1:0] tb_pc_q;
 
 reg [8:0] test_vectors [0:3];
@@ -19,7 +19,16 @@ reg [W-1:0] expected_q;
 initial tb_clk = 0;
 always #5 tb_clk = ~tb_clk;
 
-pc #(.WIDTH(W)) dut (.a(tb_a), .b({b3, b2, b1, b0}), .clk(tb_clk), .reset_sig(tb_reset), .add_sub(tb_add_sub), .en_pc_in(tb_en_pc_in), .en_pc_reg(tb_en_pc_reg), .en_pc_out(tb_en_pc_out), .pc_q(tb_pc_q));
+pc #(.WIDTH(W)) dut (
+  .a(tb_a), 
+  .b({b3, b2, b1, b0}), 
+  .clk(tb_clk), 
+  .reset_sig(tb_reset), 
+  .add_sub(tb_add_sub), 
+  .en_pc_in(tb_en_pc_in), 
+  .en_pc_reg(tb_en_pc_reg), 
+  .pc_q(tb_pc_q)
+);
 
 integer i;
 initial begin 
@@ -33,7 +42,6 @@ initial begin
    tb_add_sub = 0;
    tb_en_pc_in = 0;
    tb_en_pc_reg = 0;
-   tb_en_pc_out = 0;
    tb_reset = 1;
    repeat (2) @ (posedge tb_clk);
    #1; tb_reset = 0;
@@ -43,7 +51,6 @@ initial begin
           
         #1;
          tb_en_pc_reg = 1;
-         tb_en_pc_out = 1;
 
          @ (posedge tb_clk);
          #1;
@@ -55,7 +62,6 @@ initial begin
          end
 
          tb_en_pc_reg = 0;
-         tb_en_pc_out = 0;
          @ (posedge tb_clk);
    end
 

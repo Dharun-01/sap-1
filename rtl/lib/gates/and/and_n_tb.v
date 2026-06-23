@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module and_n_tb(); // no ports
 parameter W = 3;
 reg [W-1:0] tb_a;

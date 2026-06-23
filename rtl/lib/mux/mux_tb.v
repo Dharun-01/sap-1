@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module mux_tb();
 parameter W = 2;
 reg [W-1:0] tb_d1, tb_d0;

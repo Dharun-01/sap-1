@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module instruction_register_tb();
 parameter W = 8;
 
@@ -13,7 +15,13 @@ reg [W-1:0] expected_q;
 initial tb_clk = 0; // Initialize the clock signal to 0
 always #5 tb_clk = ~tb_clk; // Generate a clock signal with a period of 10 time units
 
-instruction_register #(.WIDTH(W)) dut (.clk(tb_clk), .en_load(tb_en_load), .reset_sig(tb_reset), .d(tb_d), .instruction_q(tb_q));
+instruction_register #(.WIDTH(W)) dut (
+  .clk(tb_clk), 
+  .en_load(tb_en_load), 
+  .reset_sig(tb_reset), 
+  .instr_d(tb_d), 
+  .instruction_q(tb_q)
+);
 
 integer i; // Declare an integer variable for use as a loop counter in the testbench
 initial begin 

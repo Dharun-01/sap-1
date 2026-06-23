@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module xnor_n_tb();
 parameter W = 2;
 reg [W-1:0] tb_a;

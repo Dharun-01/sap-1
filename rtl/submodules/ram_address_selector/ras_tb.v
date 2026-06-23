@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module ras_tb();
 parameter W = 4;
 
@@ -10,7 +12,13 @@ wire [W-1:0] tb_ras_q;
 reg [7:0] test_vectors [0:4];
 reg [W-1:0] expected_q;
 
-ras #(.WIDTH(W)) dut (.addr(tb_addr), .clk(tb_clk), .reset_sig(tb_reset), .en_ras(tb_en_ras), .ras_q(tb_ras_q));
+ras #(.WIDTH(W)) dut (
+  .addr(tb_addr), 
+  .clk(tb_clk), 
+  .reset_sig(tb_reset), 
+  .en_ras(tb_en_ras), 
+  .ras_q(tb_ras_q)
+);
 
 initial tb_clk = 0; // Initialize the clock signal to 0
 always #5 tb_clk = ~tb_clk; // Generate a clock signal with a period of 10 time units

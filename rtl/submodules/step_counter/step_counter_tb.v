@@ -16,7 +16,12 @@ always #5 tb_clk = ~tb_clk;
 
 integer i;
 
-step_counter #(.WIDTH(W)) dut (.reset_sig(tb_reset), .clk(tb_clk), .b(tb_b), .internal_result(tb_internal_result));
+step_counter #(.WIDTH(W)) dut (
+   .reset_sig(tb_reset), 
+   .clk(tb_clk), 
+   .b(tb_b), 
+   .internal_result(tb_internal_result)
+);
 
 initial begin 
   $dumpfile("sim/step_counter/step_counter.vcd");
@@ -33,10 +38,6 @@ initial begin
    for (i = 0; i < 7; i = i + 1) begin 
     {expected_q} = test_vectors[i];
      
-     // Wait for the active falling edge where the DUT actually changes
-        @(negedge tb_clk);
-        
-        // Allow 1ns for the gate outputs to settle down cleanly
         #1;
         
      if (tb_internal_result !== expected_q) begin 
@@ -44,6 +45,7 @@ initial begin
      end else begin 
       $display("Test %0d PASSED: Expected q = %b, Actual result = %b", i, expected_q, tb_internal_result);
      end
+   @ (negedge tb_clk); // Wait for the next falling edge before proceeding to the next test case
    end
    $display("All tests completed");
    $finish;

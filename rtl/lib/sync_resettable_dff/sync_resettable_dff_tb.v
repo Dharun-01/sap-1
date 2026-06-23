@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module sync_resettable_dff_tb();
 parameter W = 1;
  reg tb_clk;

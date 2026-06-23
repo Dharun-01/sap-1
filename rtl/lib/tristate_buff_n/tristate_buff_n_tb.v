@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module tristate_buff_n_tb();
 parameter W = 1;
 reg [W-1:0] tb_a;

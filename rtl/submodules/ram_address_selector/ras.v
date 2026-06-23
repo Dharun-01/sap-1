@@ -1,4 +1,11 @@
-module ras #(parameter WIDTH = 4) (input [WIDTH-1:0] addr, input clk, input reset_sig, input en_ras, output [WIDTH-1:0] ras_q);
+`timescale 1ns/1ps
+
+module ras #(parameter WIDTH = 4) (
+  input clk, 
+  input reset_sig,
+  input [WIDTH-1:0] addr,  
+  input en_ras, 
+  output [WIDTH-1:0] ras_q);
  
  genvar i; // Declare a generate variable for use in the generate block to create multiple instances of the enable D flip-flop for each bit of the RAM address selector register.
  generate 

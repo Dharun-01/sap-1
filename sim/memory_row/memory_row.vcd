@@ -1,5 +1,5 @@
 $date
-	Mon May 18 13:39:09 2026
+	Fri May 22 13:14:25 2026
 $end
 $version
 	Icarus Verilog
@@ -11,635 +11,485 @@ $scope module memory_row_tb $end
 $var wire 8 ! tb_mem_row_y [7:0] $end
 $var parameter 32 " D $end
 $var reg 8 # expected_y [7:0] $end
-$var reg 8 $ tb_data_in [7:0] $end
-$var reg 1 % tb_decoder_output_line $end
-$var reg 1 & tb_ram_in_sel $end
-$var reg 1 ' tb_ram_out_sel $end
-$var integer 32 ( i [31:0] $end
+$var reg 1 $ tb_clk $end
+$var reg 8 % tb_data_in [7:0] $end
+$var reg 1 & tb_decoder_output_line $end
+$var reg 1 ' tb_ram_in_sel $end
+$var reg 1 ( tb_reset_sig $end
+$var integer 32 ) i [31:0] $end
 $scope module dut $end
-$var wire 8 ) data_in [7:0] $end
-$var wire 1 % decoder_output_line $end
-$var wire 1 & ram_in_sel $end
-$var wire 1 ' ram_out_sel $end
-$var wire 1 * ram_in_decoder_line_output $end
-$var wire 8 + memory_cell_output [7:0] $end
-$var wire 8 , memory_cell_and_gate_output [7:0] $end
+$var wire 1 $ clk $end
+$var wire 8 * data_in [7:0] $end
+$var wire 1 & decoder_output_line $end
+$var wire 1 ' ram_in_sel $end
+$var wire 1 ( reset_sig $end
+$var wire 1 + row_write_enable $end
+$var wire 8 , memory_cell_output [7:0] $end
 $var wire 8 - mem_row_y [7:0] $end
 $var parameter 32 . DATA_W $end
 $scope begin gen_memory_cell[0] $end
 $var parameter 2 / i $end
-$scope module and_inst $end
-$var wire 2 0 a [1:0] $end
-$var wire 1 1 y $end
-$var parameter 32 2 WIDTH $end
-$upscope $end
 $scope module memory_cell_inst $end
-$var wire 1 3 d $end
-$var wire 1 4 reset $end
-$var wire 1 * clk $end
-$var parameter 32 5 WIDTH $end
-$var reg 1 6 q $end
+$var wire 1 $ clk $end
+$var wire 1 0 d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 1 WIDTH $end
+$var reg 1 2 q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 7 a $end
-$var wire 1 ' en $end
-$var wire 1 8 y $end
-$var parameter 32 9 WIDTH $end
+$var wire 1 3 a $end
+$var wire 1 & en $end
+$var wire 1 4 y $end
+$var parameter 32 5 WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[1] $end
-$var parameter 2 : i $end
-$scope module and_inst $end
-$var wire 2 ; a [1:0] $end
-$var wire 1 < y $end
-$var parameter 32 = WIDTH $end
-$upscope $end
+$var parameter 2 6 i $end
 $scope module memory_cell_inst $end
-$var wire 1 > d $end
-$var wire 1 ? reset $end
-$var wire 1 * clk $end
-$var parameter 32 @ WIDTH $end
-$var reg 1 A q $end
+$var wire 1 $ clk $end
+$var wire 1 7 d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 8 WIDTH $end
+$var reg 1 9 q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 B a $end
-$var wire 1 ' en $end
-$var wire 1 C y $end
-$var parameter 32 D WIDTH $end
+$var wire 1 : a $end
+$var wire 1 & en $end
+$var wire 1 ; y $end
+$var parameter 32 < WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[2] $end
-$var parameter 3 E i $end
-$scope module and_inst $end
-$var wire 2 F a [1:0] $end
-$var wire 1 G y $end
-$var parameter 32 H WIDTH $end
-$upscope $end
+$var parameter 3 = i $end
 $scope module memory_cell_inst $end
-$var wire 1 I d $end
-$var wire 1 J reset $end
-$var wire 1 * clk $end
-$var parameter 32 K WIDTH $end
-$var reg 1 L q $end
+$var wire 1 $ clk $end
+$var wire 1 > d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 ? WIDTH $end
+$var reg 1 @ q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 M a $end
-$var wire 1 ' en $end
-$var wire 1 N y $end
-$var parameter 32 O WIDTH $end
+$var wire 1 A a $end
+$var wire 1 & en $end
+$var wire 1 B y $end
+$var parameter 32 C WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[3] $end
-$var parameter 3 P i $end
-$scope module and_inst $end
-$var wire 2 Q a [1:0] $end
-$var wire 1 R y $end
-$var parameter 32 S WIDTH $end
-$upscope $end
+$var parameter 3 D i $end
 $scope module memory_cell_inst $end
-$var wire 1 T d $end
-$var wire 1 U reset $end
-$var wire 1 * clk $end
-$var parameter 32 V WIDTH $end
-$var reg 1 W q $end
+$var wire 1 $ clk $end
+$var wire 1 E d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 F WIDTH $end
+$var reg 1 G q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 X a $end
-$var wire 1 ' en $end
-$var wire 1 Y y $end
-$var parameter 32 Z WIDTH $end
+$var wire 1 H a $end
+$var wire 1 & en $end
+$var wire 1 I y $end
+$var parameter 32 J WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[4] $end
-$var parameter 4 [ i $end
-$scope module and_inst $end
-$var wire 2 \ a [1:0] $end
-$var wire 1 ] y $end
-$var parameter 32 ^ WIDTH $end
-$upscope $end
+$var parameter 4 K i $end
 $scope module memory_cell_inst $end
-$var wire 1 _ d $end
-$var wire 1 ` reset $end
-$var wire 1 * clk $end
-$var parameter 32 a WIDTH $end
-$var reg 1 b q $end
+$var wire 1 $ clk $end
+$var wire 1 L d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 M WIDTH $end
+$var reg 1 N q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 c a $end
-$var wire 1 ' en $end
-$var wire 1 d y $end
-$var parameter 32 e WIDTH $end
+$var wire 1 O a $end
+$var wire 1 & en $end
+$var wire 1 P y $end
+$var parameter 32 Q WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[5] $end
-$var parameter 4 f i $end
-$scope module and_inst $end
-$var wire 2 g a [1:0] $end
-$var wire 1 h y $end
-$var parameter 32 i WIDTH $end
-$upscope $end
+$var parameter 4 R i $end
 $scope module memory_cell_inst $end
-$var wire 1 j d $end
-$var wire 1 k reset $end
-$var wire 1 * clk $end
-$var parameter 32 l WIDTH $end
-$var reg 1 m q $end
+$var wire 1 $ clk $end
+$var wire 1 S d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 T WIDTH $end
+$var reg 1 U q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 n a $end
-$var wire 1 ' en $end
-$var wire 1 o y $end
-$var parameter 32 p WIDTH $end
+$var wire 1 V a $end
+$var wire 1 & en $end
+$var wire 1 W y $end
+$var parameter 32 X WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[6] $end
-$var parameter 4 q i $end
-$scope module and_inst $end
-$var wire 2 r a [1:0] $end
-$var wire 1 s y $end
-$var parameter 32 t WIDTH $end
-$upscope $end
+$var parameter 4 Y i $end
 $scope module memory_cell_inst $end
-$var wire 1 u d $end
-$var wire 1 v reset $end
-$var wire 1 * clk $end
-$var parameter 32 w WIDTH $end
-$var reg 1 x q $end
+$var wire 1 $ clk $end
+$var wire 1 Z d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 [ WIDTH $end
+$var reg 1 \ q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 y a $end
-$var wire 1 ' en $end
-$var wire 1 z y $end
-$var parameter 32 { WIDTH $end
+$var wire 1 ] a $end
+$var wire 1 & en $end
+$var wire 1 ^ y $end
+$var parameter 32 _ WIDTH $end
 $upscope $end
 $upscope $end
 $scope begin gen_memory_cell[7] $end
-$var parameter 4 | i $end
-$scope module and_inst $end
-$var wire 2 } a [1:0] $end
-$var wire 1 ~ y $end
-$var parameter 32 !" WIDTH $end
-$upscope $end
+$var parameter 4 ` i $end
 $scope module memory_cell_inst $end
-$var wire 1 "" d $end
-$var wire 1 #" reset $end
-$var wire 1 * clk $end
-$var parameter 32 $" WIDTH $end
-$var reg 1 %" q $end
+$var wire 1 $ clk $end
+$var wire 1 a d $end
+$var wire 1 ( reset $end
+$var wire 1 + en $end
+$var parameter 32 b WIDTH $end
+$var reg 1 c q $end
 $upscope $end
 $scope module tristate_inst $end
-$var wire 1 &" a $end
-$var wire 1 ' en $end
-$var wire 1 '" y $end
-$var parameter 32 (" WIDTH $end
+$var wire 1 d a $end
+$var wire 1 & en $end
+$var wire 1 e y $end
+$var parameter 32 f WIDTH $end
 $upscope $end
 $upscope $end
 $scope module ram_in_control_inst $end
-$var wire 2 )" a [1:0] $end
-$var wire 1 * y $end
-$var parameter 32 *" WIDTH $end
+$var wire 2 g a [1:0] $end
+$var wire 1 + y $end
+$var parameter 32 h WIDTH $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b10 *"
-b1 ("
-b1 $"
-b10 !"
-b111 |
-b1 {
-b1 w
-b10 t
-b110 q
-b1 p
-b1 l
-b10 i
-b101 f
-b1 e
-b1 a
-b10 ^
-b100 [
-b1 Z
-b1 V
-b10 S
-b11 P
-b1 O
-b1 K
-b10 H
-b10 E
-b1 D
-b1 @
+b10 h
+b1 f
+b1 b
+b111 `
+b1 _
+b1 [
+b110 Y
+b1 X
+b1 T
+b101 R
+b1 Q
+b1 M
+b100 K
+b1 J
+b1 F
+b11 D
+b1 C
+b1 ?
 b10 =
-b1 :
-b1 9
+b1 <
+b1 8
+b1 6
 b1 5
-b10 2
+b1 1
 b0 /
 b1000 .
 b1000 "
 $end
 #0
 $dumpvars
-b0 )"
-z'"
-0&"
-x%"
-0#"
-1""
-0~
-bx0 }
-zz
-0y
-xx
-0v
-0u
-0s
-bx0 r
-zo
-0n
-xm
-0k
-0j
-0h
-bx0 g
-zd
+b0 g
+ze
+0d
 0c
-xb
-0`
-0_
+xa
+z^
 0]
-bx0 \
-zY
-0X
-xW
+0\
+xZ
+zW
+0V
 0U
-1T
-0R
-bx0 Q
-zN
-0M
+xS
+zP
+0O
+0N
 xL
-0J
-0I
+zI
+0H
 0G
-bx0 F
-zC
-0B
-xA
-0?
-0>
-0<
-bx0 ;
-z8
-07
-x6
-04
+xE
+zB
+0A
+0@
+x>
+z;
+0:
+09
+x7
+z4
 03
-01
-bx0 0
+02
+x0
 bz -
 b0 ,
-bx +
-0*
-b10001000 )
-b0 (
+0+
+bx *
+bx )
+1(
 0'
 0&
-0%
-b10001000 $
-b10001000 #
+bx %
+0$
+b0 #
 bz !
 $end
-#1000
-06
-0A
+#5000
+1$
+#10000
+00
+07
+0>
+1E
 0L
-1W
-0b
-0m
-0x
-b10001000 +
-1%"
-08
-0C
-0N
-1Y
-0d
-0o
-0z
+0S
+0Z
+1a
+0$
+b10001000 %
+b10001000 *
+b10001000 #
+b0 )
+0(
+#11000
+04
+0;
+0B
+0I
+0P
+0W
+0^
+b0 !
+b0 -
+0e
+1+
+1'
+b11 g
+1&
+#15000
+1I
 b10001000 !
 b10001000 -
-1'"
-07
-0B
-0M
-1X
-0c
-0n
-0y
-1&"
-1'
-1*
-1&
-b11 )"
-01
-b1 0
-0<
-b1 ;
-0G
-b1 F
-1R
-b11 Q
-0]
-b1 \
-0h
-b1 g
-0s
-b1 r
+1e
+1H
+1d
+1G
 b10001000 ,
-1~
-b11 }
-1%
-#10000
-z8
-zC
-zN
-zY
-zd
-zo
-zz
+1c
+1$
+#20000
+z4
+z;
+zB
+zI
+zP
+zW
+z^
 bz !
 bz -
-z'"
-0X
-0&"
+ze
+0$
 0'
-0&
-0*
-b0 )"
-b0 0
-b0 ;
-b0 F
-0R
-b10 Q
-b0 \
+0+
 b0 g
-b0 r
-b0 ,
-0~
-b10 }
-0%
-#20000
-0T
-1_
-1j
-1u
-b11110000 $
-b11110000 )
+0&
+#25000
+1$
+#30000
+0E
+1L
+1S
+1Z
+0$
+b11110000 %
+b11110000 *
 b11110000 #
-b1 (
-#21000
-1c
-1n
-1y
-1]
-1h
-1s
+b1 )
+#31000
+04
+0;
+0B
+1I
+0P
 0W
-1b
-1m
-b11110000 +
-1x
-08
-0C
-0N
-0Y
-1d
-1o
-1z
+0^
+b10001000 !
+b10001000 -
+1e
+1+
+1'
+b11 g
+1&
+#35000
+0I
+1P
+1W
 b11110000 !
 b11110000 -
-1'"
-0X
-1&"
-1'
-1*
-1&
-b11 )"
-b1 0
-b1 ;
-b1 F
-0R
-b1 Q
-b11 \
-b11 g
-b11 r
+1^
+0H
+1O
+1V
+1]
+0G
+1N
+1U
 b11110000 ,
-1~
-b11 }
-1%
-#30000
-z8
-zC
-zN
-zY
-zd
-zo
-zz
+1\
+1$
+#40000
+z4
+z;
+zB
+zI
+zP
+zW
+z^
 bz !
 bz -
-z'"
-0c
-0n
-0y
-0&"
+ze
+0$
 0'
+0+
+b0 g
 0&
-0*
-b0 )"
-b0 0
-b0 ;
-b0 F
-b0 Q
-0]
-b10 \
-0h
-b10 g
-0s
-b10 r
-b0 ,
-0~
-b10 }
-0%
-#40000
-13
-1I
-0j
-0""
-b1010101 $
-b1010101 )
+#45000
+1$
+#50000
+10
+1>
+0S
+0a
+0$
+b1010101 %
+b1010101 *
 b1010101 #
-b10 (
-#41000
-17
-1M
-11
-1G
-16
-1L
-0m
-b1010101 +
-0%"
-18
-0C
-1N
-0Y
-1d
-0o
-1z
+b10 )
+#51000
+04
+0;
+0B
+0I
+1P
+1W
+1^
+b11110000 !
+b11110000 -
+1e
+1+
+1'
+b11 g
+1&
+#55000
+14
+1B
+0W
 b1010101 !
 b1010101 -
-0'"
-1c
-0n
-1y
-0&"
-1'
-1*
-1&
-b11 )"
-b11 0
-b1 ;
-b11 F
-b1 Q
-1]
-b11 \
-0h
-b1 g
-1s
-b11 r
+0e
+13
+1A
+0V
+0d
+12
+1@
+0U
 b1010101 ,
-0~
-b1 }
-1%
-#50000
-z8
-zC
-zN
-zY
-zd
-zo
-zz
+0c
+1$
+#60000
+z4
+z;
+zB
+zI
+zP
+zW
+z^
 bz !
 bz -
-z'"
-07
-0M
-0c
-0y
+ze
+0$
 0'
-0&
-0*
-b0 )"
-01
-b10 0
-b0 ;
-0G
-b10 F
-b0 Q
-0]
-b10 \
+0+
 b0 g
-b0 ,
-0s
-b10 r
-b0 }
-0%
-#60000
-03
-1T
-0_
-1""
-b11001100 $
-b11001100 )
+0&
+#65000
+1$
+#70000
+00
+1E
+0L
+1a
+0$
+b11001100 %
+b11001100 *
 b11001100 #
-b11 (
-#61000
-1X
-1&"
-1R
-1~
-06
-1W
-0b
-b11001100 +
-1%"
-08
-0C
-1N
-1Y
-0d
-0o
-1z
+b11 )
+#71000
+14
+0;
+1B
+0I
+1P
+0W
+1^
+b1010101 !
+b1010101 -
+0e
+1+
+1'
+b11 g
+1&
+#75000
+04
+1I
+0P
 b11001100 !
 b11001100 -
-1'"
-07
-1M
-0c
-1y
-1'
-1*
-1&
-b11 )"
-01
-b1 0
-b1 ;
+1e
+03
+1H
+0O
+1d
+02
 1G
-b11 F
-b11 Q
-0]
-b1 \
-b1 g
+0N
 b11001100 ,
-1s
-b11 r
-b11 }
-1%
-#70000
-z8
-zC
-zN
-zY
-zd
-zo
-zz
+1c
+1$
+#80000
+z4
+z;
+zB
+zI
+zP
+zW
+z^
 bz !
 bz -
-z'"
-0M
-0X
-0y
-0&"
+ze
+0$
 0'
-0&
-0*
-b0 )"
-b0 0
-b0 ;
-0G
-b10 F
-0R
-b10 Q
-b0 \
+0+
 b0 g
-0s
-b10 r
-b0 ,
-0~
-b10 }
-0%
-#80000
-b100 (
+0&
+#85000
+1$
+#90000
+0$
+b100 )

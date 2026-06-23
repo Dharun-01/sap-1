@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module decoder_n #(parameter WIDTH = 2) (input [WIDTH-1:0] in, output reg [2**WIDTH-1:0] y);
 
 always @ (*) begin 

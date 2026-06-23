@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module display_unit_tb();
 parameter D_W = 8;
 

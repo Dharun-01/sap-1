@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module display_unit #(parameter D_WIDTH = 8) 
 (
   input [D_WIDTH-1:0] data_in,

@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module decoder_tb();
 parameter N = 3; // Number of input bits for the decoder, which will determine the size of the output (2^N)
 reg [N-1:0] tb_in;
