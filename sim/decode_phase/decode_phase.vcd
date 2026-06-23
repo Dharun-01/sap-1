@@ -1,0 +1,320 @@
+$date
+	Sun May 24 20:57:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module decode_phase_tb $end
+$var wire 8 ! tb_dec_out_view_bus [7:0] $end
+$var parameter 32 " WORD_W $end
+$var reg 8 # expected_dec_out_view_bus [7:0] $end
+$var reg 1 $ tb_clk $end
+$var reg 1 % tb_dec_en_ir_in $end
+$var reg 1 & tb_dec_en_ir_out $end
+$var reg 8 ' tb_dec_instr_d [7:0] $end
+$var reg 1 ( tb_reset $end
+$var integer 32 ) vector_index [31:0] $end
+$scope module decode_phase_inst $end
+$var wire 1 $ clk $end
+$var wire 1 % dec_en_ir_in $end
+$var wire 1 & dec_en_ir_out $end
+$var wire 8 * dec_instr_d [7:0] $end
+$var wire 8 + dec_out_view_bus [7:0] $end
+$var wire 1 ( reset $end
+$var wire 8 , w_bus [7:0] $end
+$var wire 8 - ir_out [7:0] $end
+$var parameter 32 . WORD_WIDTH $end
+$scope module instruction_register_inst $end
+$var wire 1 $ clk $end
+$var wire 1 % en_load $end
+$var wire 8 / instr_d [7:0] $end
+$var wire 1 ( reset_sig $end
+$var wire 8 0 instruction_q [7:0] $end
+$var parameter 32 1 WIDTH $end
+$scope begin en_dff[0] $end
+$var parameter 2 2 i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 3 d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 4 WIDTH $end
+$var reg 1 5 q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[1] $end
+$var parameter 2 6 i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 7 d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 8 WIDTH $end
+$var reg 1 9 q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[2] $end
+$var parameter 3 : i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 ; d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 < WIDTH $end
+$var reg 1 = q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[3] $end
+$var parameter 3 > i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 ? d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 @ WIDTH $end
+$var reg 1 A q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[4] $end
+$var parameter 4 B i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 C d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 D WIDTH $end
+$var reg 1 E q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[5] $end
+$var parameter 4 F i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 G d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 H WIDTH $end
+$var reg 1 I q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[6] $end
+$var parameter 4 J i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 K d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 L WIDTH $end
+$var reg 1 M q $end
+$upscope $end
+$upscope $end
+$scope begin en_dff[7] $end
+$var parameter 4 N i $end
+$scope module dff $end
+$var wire 1 $ clk $end
+$var wire 1 O d $end
+$var wire 1 % en $end
+$var wire 1 ( reset $end
+$var parameter 32 P WIDTH $end
+$var reg 1 Q q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module ir_bus_driver $end
+$var wire 4 R a [3:0] $end
+$var wire 1 & en $end
+$var wire 4 S y [3:0] $end
+$var parameter 32 T WIDTH $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 T
+b1 P
+b111 N
+b1 L
+b110 J
+b1 H
+b101 F
+b1 D
+b100 B
+b1 @
+b11 >
+b1 <
+b10 :
+b1 8
+b1 6
+b1 4
+b0 2
+b1000 1
+b1000 .
+b1000 "
+$end
+#0
+$dumpvars
+bz S
+b0 R
+0Q
+xO
+0M
+xK
+0I
+xG
+0E
+xC
+0A
+x?
+0=
+x;
+09
+x7
+05
+x3
+b0 0
+bx /
+b0 -
+bz ,
+bz +
+bx *
+b0 )
+1(
+bx '
+0&
+0%
+0$
+bx #
+bz !
+$end
+#5000
+1$
+#10000
+0$
+#15000
+1$
+0(
+#20000
+0$
+#25000
+1$
+#30000
+13
+07
+1;
+0?
+1C
+0G
+1K
+0O
+1%
+b1010101 '
+b1010101 *
+b1010101 /
+bz #
+0$
+#32000
+b1 )
+#35000
+b101 R
+15
+1=
+1E
+b1010101 -
+b1010101 0
+1M
+1$
+#40000
+bz0101 !
+bz0101 +
+bz0101 ,
+b101 S
+0%
+1&
+bz0101 #
+0$
+#42000
+b10 )
+#45000
+1$
+#50000
+bz !
+bz +
+bz ,
+bz S
+03
+0;
+1G
+1O
+1%
+0&
+b11110000 '
+b11110000 *
+b11110000 /
+bz #
+0$
+#52000
+b11 )
+#55000
+b0 R
+05
+0=
+1I
+b11110000 -
+b11110000 0
+1Q
+1$
+#60000
+bz0000 !
+bz0000 +
+bz0000 ,
+b0 S
+0%
+1&
+bz0000 #
+0$
+#62000
+b100 )
+#65000
+1$
+#70000
+bz !
+bz +
+bz ,
+bz S
+13
+0G
+0K
+0O
+1%
+0&
+b10001 '
+b10001 *
+b10001 /
+bz #
+0$
+#72000
+b101 )
+#75000
+b1 R
+15
+0I
+0M
+b10001 -
+b10001 0
+0Q
+1$
+#80000
+bz0001 !
+bz0001 +
+bz0001 ,
+b1 S
+0%
+1&
+bz0001 #
+0$
+#82000
+b110 )
