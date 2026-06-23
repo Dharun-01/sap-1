@@ -1,5 +1,21 @@
 // Format: opcode(4)_reset(1)_step(3)_flag(2)_control_lines(16)
-// Control Lines: [15]en_ir_out, [14]en_ir_in, [13]en_ras_in, [12]en_a_in, [11]en_ram_out, [10]en_a_out, [9]en_b_in, [8]en_pc_in, [7]en_pc_out, [6]en_ram_in, [5]en_add_sub, [4]en_hlt, [3]en_alu_out, [2]en_out_in, [1]en_pc_latcher, [0]en_reset_step_counter
+// Control Lines: 
+[15] en_ir_out, 
+[14] en_ir_in, 
+[13] en_ras_in, 
+[12] en_a_in, 
+[11] en_ram_out, 
+[10] en_a_out, 
+[9]  en_b_in,
+[8]  en_pc_in, 
+[7]  en_pc_out, 
+[6]  en_ram_in, 
+[5]  en_add_sub, 
+[4]  en_hlt, 
+[3]  en_alu_out, 
+[2]  en_out_in, 
+[1]  en_pc_latcher, 
+[0]  en_reset_step_counter
 
 // ==========================================
 // 0. RESET TIMING CASES

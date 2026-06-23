@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module control_unit ( 
   input reset, 
   input [3:0] opcode, // From Instruction Register
@@ -40,7 +42,7 @@ localparam T1 = 3'd1;
 localparam T2 = 3'd2;
 localparam T3 = 3'd3;
 localparam T4 = 3'd4;
-
+localparam T5 = 3'd5;
 // Task Block to clear the BUS control lines cleanly.
 
 task clear_control_word;
@@ -85,13 +87,11 @@ always @ (*) begin
     T2: begin 
      case (opcode) 
       OP_LDA: begin en_ir_out = 1; en_ras_in = 1;                             end // Move address to RAS
-      OP_LDI: begin en_ir_out = 1; en_a_in   = 1; en_reset_step_counter = 1;  end
+      OP_LDI: begin en_ir_out = 1; en_a_in   = 1;                             end
       OP_ADD: begin en_ir_out = 1; en_ras_in = 1;                             end
       OP_SUB: begin en_ir_out = 1; en_ras_in = 1;                             end
       OP_STA: begin en_ir_out = 1; en_ras_in = 1;                             end
-      OP_JMP: begin 
-        en_ir_out = 1; en_pc_in  = 1; en_pc_latcher = 1; en_reset_step_counter = 1;         
-            end
+      OP_JMP: begin en_ir_out = 1; en_pc_in  = 1; en_pc_latcher = 1;          end
 
      // --- CONDITIONAL JUMPS --- 
       OP_JC : begin 
@@ -100,7 +100,6 @@ always @ (*) begin
             en_pc_in  = 1; 
             en_pc_latcher = 1; 
             end
-            en_reset_step_counter = 1; // If flag is 0, it falls through and remains a safe NOP (No Operation)
        end
        
       OP_JZ : begin
@@ -109,10 +108,9 @@ always @ (*) begin
            en_pc_in  = 1; 
            en_pc_latcher = 1; 
            end
-           en_reset_step_counter = 1;
        end
       OP_OUT: begin 
-        en_a_out  = 1; en_out_in = 1; en_reset_step_counter = 1; 
+        en_a_out  = 1; en_out_in = 1;
       end
 
       OP_HLT: begin en_hlt    = 1;                                     end
@@ -122,25 +120,39 @@ always @ (*) begin
     T3: begin 
       case (opcode)
       OP_LDA: begin 
-        en_ram_out = 1; en_a_in   = 1; en_reset_step_counter = 1; 
+        en_ram_out = 1; en_a_in = 1; 
         end
+      OP_LDI: begin en_reset_step_counter = 1;                         end
+      OP_JMP: begin en_reset_step_counter = 1;                         end
+      OP_JC: begin en_reset_step_counter = 1;                          end // If flag is 0, it falls through and remains a safe NOP (No Operation)
+      OP_JZ: begin en_reset_step_counter = 1;                          end // If flag is 0, it falls through and remains a safe NOP (No Operation)
+      OP_OUT: begin en_reset_step_counter = 1;                         end
       OP_ADD: begin en_ram_out = 1; en_b_in   = 1;                     end
       OP_SUB: begin en_ram_out = 1; en_b_in   = 1;                     end
       OP_STA: begin 
-        en_a_out   = 1; en_ram_in = 1; en_reset_step_counter = 1;
+        en_a_out   = 1; en_ram_in = 1;
         end
       default: clear_control_word();
       endcase
     end
     T4: begin 
       case (opcode) 
+      OP_LDA: begin en_reset_step_counter = 1;                         end
        OP_ADD: begin 
-        en_alu_out = 1; en_a_in = 1; en_reset_step_counter = 1;
+        en_alu_out = 1; en_a_in = 1;
         end
+        OP_STA: begin en_reset_step_counter = 1;                         end
        OP_SUB: begin 
-        en_alu_out = 1; en_a_in = 1; en_add_sub = 1; en_reset_step_counter = 1; 
+        en_alu_out = 1; en_a_in = 1; en_add_sub = 1; 
         end
        default: clear_control_word();
+      endcase
+    end
+    T5: begin 
+      case (opcode) 
+      OP_ADD: begin en_reset_step_counter = 1;                         end
+      OP_SUB: begin en_reset_step_counter = 1;                         end
+      default: clear_control_word();
       endcase
     end
     default: clear_control_word();
