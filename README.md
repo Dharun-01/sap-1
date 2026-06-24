@@ -66,26 +66,27 @@ The processor natively decodes and executes a robust 10-instruction set capable 
 
 # General Commands to Run the Hardware Module
 
-To compile the hardware module:
+```bash
+# 1. Compile the hardware logic
+ iverilog -o sim/<folder_name>/<file_name>_sim rtl/<folder_name>/<file_name>.v rtl/<folder_name>/<file_name>_tb.v
 
-- `bash iverilog -o sim/folderName/fileName_sim rtl/folderName(s)/fileName.v rtl/folderName(s)/fileName_tb.v`
+# 2. Execute the compiled simulation
+ vvp sim/<folder_name>/<file_name>_sim
 
-To run the compiled code:
-
-- `bash vvp sim/folderName/fileName_sim`
-
-To view the waveform of the simulation:
-
-- `bash gtkwave sim/folderName/fileName.vcd`
+# 3.To view the waveform of the simulation
+ gtkwave sim/<folder_name>/<file_name>.vcd
+```
 
 ---
 
 # To Run the sap-1 Module
 
-- `bash iverilog -o sim/top/sap_1_sim -s sap_1_tb rtl/lib/\*/\*/\*.v rtl/lib/\*/\*.v rtl/submodules/\*/\*.v rtl/top/sap_1.v rtl/top/sap_1_tb.v`
+```bash
+ iverilog -o sim/top/sap_1_sim -s sap_1_tb rtl/lib/\*/\*/\*.v rtl/lib/\*/\*.v rtl/submodules/\*/\*.v rtl/top/sap_1.v rtl/top/sap_1_tb.v
 
-- `bash vvp sim/top/sap_1_sim`
+ vvp sim/top/sap_1_sim
 
-- `bash gtkwave sim/top/sap_1.vcd`
+ gtkwave sim/top/sap_1.vcd
+```
 
 ---
