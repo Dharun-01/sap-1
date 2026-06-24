@@ -68,24 +68,24 @@ The processor natively decodes and executes a robust 10-instruction set capable 
 
 To compile the hardware module:
 
-iverilog -o sim/folderName/fileName_sim rtl/folderName(s)/fileName.v rtl/folderName(s)/fileName_tb.v
+- ` bash iverilog -o sim/folderName/fileName_sim rtl/folderName(s)/fileName.v rtl/folderName(s)/fileName_tb.v`
 
 To run the compiled code:
 
-vvp sim/folderName/fileName_sim
+- ` bash vvp sim/folderName/fileName_sim`
 
 To view the waveform of the simulation:
 
-gtkwave sim/folderName/fileName.vcd
+- ` bash gtkwave sim/folderName/fileName.vcd`
 
 ---
 
 # To Run the sap-1 Module
 
-1. iverilog -o sim/top/sap_1_sim -s sap_1_tb rtl/lib/\*/\*/\*.v rtl/lib/\*/\*.v rtl/submodules/\*/\*.v rtl/top/sap_1.v rtl/top/sap_1_tb.v
+- ` bash iverilog -o sim/top/sap_1_sim -s sap_1_tb rtl/lib/\*/\*/\*.v rtl/lib/\*/\*.v rtl/submodules/\*/\*.v rtl/top/sap_1.v rtl/top/sap_1_tb.v`
 
-2. vvp sim/top/sap_1_sim
+- ` bash vvp sim/top/sap_1_sim`
 
-3. gtkwave sim/top/sap_1.vcd
+- `bash gtkwave sim/top/sap_1.vcd`
 
 ---
