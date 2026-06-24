@@ -36,30 +36,30 @@ The processor natively decodes and executes a robust 10-instruction set capable 
 ## Project Structure
 
 ```text
-├── assets/                  # Contains .dig files of SAP-1 to run in the "Digital" simulator
-├── sim/                     # Contains compiled binaries and VCD waveform output dumps for all modules
-└── rtl/                     # Register-Transfer Level (RTL) source code
-    ├── lib/                 # Foundational primitive hardware library utilities
-    │   ├── gates/           # Basic logic gates (and, nand, nor, not, or, xnor, xor)
-    │   ├── en_dff/          # Enabled D Flip-Flops
-    │   ├── decoder/         # Binary address decoders
-    │   ├── full_adder/      # Arithmetic adders
-    │   ├── memory_row/      # RAM cell row slices
-    │   ├── mux/             # Multiplexers
-    │   └── tristate_buff_n/ # Tristate bus isolation buffers
-    ├── submodules/          # Architectural structural functional blocks
-    │   ├── alu/             # Arithmetic Logic Unit
-    │   ├── control_unit/    # Microcode control matrix
-    │   ├── display_unit/    # I/O peripheral visualization port
-    │   ├── instruction_reg/ # Instruction Register (IR)
-    │   ├── pc/              # Program Counter (PC)
-    │   ├── ram/             # Customizable main memory unit
-    │   ├── ram_address_sel/ # Memory Address Multiplexer (MAR selection logic)
-    │   └── step_counter/    # T-state execution step tracking generator
-    ├── subsystems_tests/    # Integrated pipeline validation (Fetch, Decode, Execution stages)
-    └── top/                 # Top-level system wrapper and verification environment
-        ├── sap_1.v          # Ultimate top module tying all submodules together
-        └── sap_1_tb.v       # Top testbench executing an assembly countdown program
+├── assets/                       # Contains .dig files of SAP-1 to run in the "Digital" simulator
+├── sim/                          # Contains compiled binaries and VCD waveform output dumps for all modules
+└── rtl/                          # Register-Transfer Level (RTL) source code
+    ├── lib/                      # Foundational primitive hardware library utilities
+    │   ├── gates/                # Basic logic gates (and, nand, nor, not, or, xnor, xor)
+    │   ├── en_dff/               # Enabled D Flip-Flops
+    │   ├── decoder/              # Binary address decoders
+    │   ├── full_adder/           # Arithmetic adders
+    │   ├── memory_row/           # RAM cell row slices
+    │   ├── mux/                  # Multiplexers
+    │   └── tristate_buff_n/      # Tristate bus isolation buffers
+    ├── submodules/               # Architectural structural functional blocks
+    │   ├── alu/                  # Arithmetic Logic Unit
+    │   ├── control_unit/         # Microcode control matrix
+    │   ├── display_unit/         # I/O peripheral visualization port
+    │   ├── instruction_register/ # Instruction Register (IR)
+    │   ├── pc/                   # Program Counter (PC)
+    │   ├── ram/                  # Customizable main memory unit
+    │   ├── ram_address_selector/ # Memory Address Multiplexer (MAR selection logic)
+    │   └── step_counter/         # T-state execution step tracking generator
+    ├── subsystems_tests/         # Integrated pipeline validation (Fetch, Decode, Execution stages)
+    └── top/                      # Top-level system wrapper and verification environment
+        ├── sap_1.v               # Ultimate top module tying all submodules together
+        └── sap_1_tb.v            # Top testbench executing an assembly countdown program
 ```
 
 ---
